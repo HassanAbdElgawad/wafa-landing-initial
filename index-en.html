@@ -1,0 +1,823 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8" />
+    <title>Wafa – Customer Loyalty Platform</title>
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/styleguide.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+      /* ── LTR overrides ───────────────────────────────── */
+      html, body { direction: ltr !important; }
+
+      /* Reset direction on all text elements */
+      .p, .text-wrapper-4, .text-wrapper-5, .text-wrapper-6,
+      .text-wrapper-37, .text-wrapper-38, .text-wrapper-39,
+      .text-wrapper-40, .text-wrapper-41,
+      .text-wrapper-19, .text-wrapper-20,
+      .text-wrapper-17, .text-wrapper-18,
+      .text-wrapper-28, .text-wrapper-30,
+      .text-wrapper-33, .text-wrapper-34,
+      .text-wrapper-35, .text-wrapper-36,
+      .text-works-with, .text-works-with-2, .text-works-with-3,
+      .text-works-with-4, .text-works-with-5, .text-works-with-6,
+      .text-works-with-7, .text-works-with-8, .text-works-with-9,
+      .text-works-with-10, .text-works-with-11, .text-works-with-12,
+      .real-input, .real-textarea,
+      .nav-link, .mob-link, .close-button-text, .close-button-text-2,
+      .footer-nav-link, .text-wrapper-7, .text-wrapper-8,
+      .text-wrapper-9, .text-wrapper-10, .text-wrapper-11,
+      .text-wrapper-21, .text-wrapper-22, .text-wrapper-23,
+      .text-wrapper-32, .text-wrapper-2 {
+        direction: ltr;
+      }
+
+      /* Stat card text — align left in LTR */
+      .text-works-with, .text-works-with-2, .text-works-with-3,
+      .text-works-with-4, .text-works-with-5, .text-works-with-6 {
+        text-align: left;
+      }
+
+      /* Stat cards — flip flex direction for LTR alternating layout */
+      .stat-card-layout            { flex-direction: row-reverse; }
+      .stat-card-layout--alt       { flex-direction: row; }
+      .stat-source                 { align-items: flex-start; }
+
+      /* Form — left-align */
+      .frame-23                    { justify-content: flex-start; }
+      .real-input, .real-textarea  { text-align: left; }
+      .text-wrapper-28,
+      .text-wrapper-30             { text-align: left; }
+      .field-error                 { align-self: flex-start; }
+      .frame-22, .frame-25, .frame-26,
+      .frame-27, .frame-28, .frame-29 { align-items: flex-start; }
+
+      /* Contact info panel — left-align internals */
+      .frame-32                    { align-items: flex-start; }
+      .frame-33                    { align-items: flex-start; }
+      .frame-36                    { align-items: flex-start; }
+      .text-wrapper-33,
+      .text-wrapper-34             { text-align: left; }
+
+      /* Footer */
+      .text-wrapper-18             { text-align: left; }
+      .frame-8, .frame-12-flex     { align-items: flex-start; }
+      .frame-7, .frame-10, .frame-11 { align-items: flex-start; }
+      .wafaa-full-logo-2           { align-self: flex-start; }
+      .text-wrapper-17             { text-align: left; }
+    </style>
+  </head>
+  <body>
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#home" class="logo-link" aria-label="Wafa - Home">
+          <img
+            alt="Wafa"
+            class="wafaa-full-logo"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/wafaa-full-logo.png"
+          />
+        </a>
+        <!-- Desktop nav -->
+        <nav class="desktop-nav" id="desktop-nav">
+          <a class="nav-link active" data-section="home" href="#home">
+            Home
+          </a>
+          <span class="nav-item-wrap">
+            <a class="nav-link" data-section="how" href="#how"> How It Works </a>
+          </span>
+          <span class="nav-item-wrap">
+            <a class="nav-link" href="javascript:void(0)">
+              Pricing
+            </a>
+            <span class="badge-soon"> Soon </span>
+          </span>
+          <span class="nav-item-wrap">
+            <a class="nav-link" data-section="features" href="#features">
+              Features
+            </a>
+            <span class="badge-soon"> Soon </span>
+          </span>
+          <span class="nav-item-wrap">
+            <a class="nav-link" data-section="contact" href="#contact">
+              Contact Us
+            </a>
+          </span>
+        </nav>
+        <div class="header-actions">
+          <a class="frame-3 lang-btn" href="index.html" style="text-decoration:none;">
+            <span class="close-button-text-2"> AR </span>
+          </a>
+          <a
+            class="frame launch-btn"
+            href="https://portal.wafaapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="close-button-text"> Join the Launch List </span>
+          </a>
+          <!-- Hamburger -->
+          <button
+            aria-expanded="false"
+            aria-label="Menu"
+            class="hamburger"
+            id="hamburger"
+          >
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile nav drawer -->
+      <nav aria-hidden="true" class="mobile-nav" id="mobile-nav">
+        <a class="mob-link active" data-section="home" href="#home">
+          Home
+        </a>
+        <a class="mob-link" data-section="how" href="#how"> How It Works </a>
+        <a class="mob-link" data-section="pricing" href="javascript:void(0)">
+          Pricing
+          <span class="badge-soon-mob"> Soon </span>
+        </a>
+        <a class="mob-link" data-section="features" href="#features">
+          Features
+          <span class="badge-soon-mob"> Soon </span>
+        </a>
+        <a class="mob-link" data-section="contact" href="#contact">
+          Contact Us
+        </a>
+        <a
+          class="mob-cta"
+          href="https://portal.wafaapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the Launch List
+        </a>
+      </nav>
+    </header>
+    <!-- ===== HERO ===== -->
+    <section class="hero-section" id="home">
+      <p class="p" data-aos="fade-up" data-aos-duration="800">
+        <span class="span"> One customer </span>
+        <span class="text-wrapper-3"> can visit you </span>
+        <span class="span"> ten times a week </span>
+        <span class="text-wrapper-3"> — if you know </span>
+        <span class="span"> how to earn their loyalty </span>
+      </p>
+      <p
+        class="text-wrapper-4"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100"
+      >
+        Wafa turns customer data into decisions that drive more sales.
+      </p>
+      <div
+        class="hero-cta-row"
+        id="launch"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-delay="200"
+      >
+        <a
+          class="close-button-text-wrapper"
+          href="https://portal.wafaapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="close-button-text"> Join the Launch List </span>
+        </a>
+      </div>
+      <!-- MacBook mockup -->
+      <div
+        class="frame-2"
+        data-aos="zoom-in"
+        data-aos-duration="900"
+        data-aos-delay="150"
+      >
+        <div class="shadow"></div>
+        <div class="top">
+          <img
+            alt=""
+            class="lid"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/lid.png"
+          />
+          <div class="screen-wrap">
+            <img
+              alt="Dashboard screenshot"
+              class="image"
+              src="https://c.animaapp.com/mncbubs9TCSay8/img/image-48.png"
+            />
+          </div>
+          <div class="text-wrapper">Macbook Pro</div>
+        </div>
+        <img
+          alt=""
+          class="bottom"
+          src="https://c.animaapp.com/mncbubs9TCSay8/img/bottom.png"
+        />
+        <img
+          alt=""
+          class="img"
+          src="https://c.animaapp.com/mncbubs9TCSay8/img/frame-1261154387-1.png"
+        />
+        <img
+          alt=""
+          class="rectangle-2"
+          src="https://c.animaapp.com/mncbubs9TCSay8/img/rectangle-1.png"
+        />
+        <div class="rectangle-3"></div>
+        <div class="group">
+          <div class="rectangle-4"></div>
+          <div class="text-wrapper-2">Coming soon...</div>
+        </div>
+        <div class="group-2">
+          <div class="rectangle-4"></div>
+          <div class="text-wrapper-2">Coming soon...</div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== LOYALTY POWER ===== -->
+    <section class="loyalty-section" id="features">
+      <div class="text-wrapper-6" data-aos="fade-up">The Power of Loyalty Programs</div>
+      <p class="text-wrapper-5" data-aos="fade-up" data-aos-delay="100">
+        Lorem ipsum is a placeholder text commonly used in the design and
+        publishing industries to fill space on a page and give a sense of the
+        final content layout.
+      </p>
+      <!-- Stat card 1 -->
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
+        <div class="border"></div>
+        <div class="stat-card-layout stat-card-layout--alt">
+          <img
+            alt=""
+            class="ellipse"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-137.png"
+          />
+          <div class="stat-text-col">
+            <p class="text-works-with">15% to 25%+ Annual Growth</p>
+            <p class="text-works-with-2">
+              in revenue from customers who redeem rewards in top-performing
+              loyalty programs
+            </p>
+            <div class="stat-source">
+              <div class="text-works-with-3">Source</div>
+              <img
+                alt=""
+                class="image-2"
+                src="https://c.animaapp.com/mncbubs9TCSay8/img/image-49.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stat card 2 -->
+      <div
+        class="container-2"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="100"
+      >
+        <div class="border-2"></div>
+        <div class="stat-card-layout">
+          <img
+            alt=""
+            class="ellipse-2"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-137-1.png"
+          />
+          <div class="stat-text-col">
+            <div class="text-works-with-4">60% of Starbucks Revenue</div>
+            <p class="text-works-with-5">
+              in the US came from loyalty program members
+            </p>
+            <div class="stat-source">
+              <div class="text-works-with-6">Source</div>
+              <div class="group-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== PROBLEM ===== -->
+    <section class="problem-section" id="how">
+      <div class="text-wrapper-40" data-aos="fade-up">The Problem</div>
+      <p class="text-wrapper-37" data-aos="fade-up" data-aos-delay="80">
+        Most businesses don't know
+      </p>
+      <p class="text-wrapper-39" data-aos="fade-up" data-aos-delay="160">
+        Without data… marketing becomes guesswork!
+      </p>
+      <div class="cards-grid problem-grid">
+        <!-- Card 1 -->
+        <div class="group-15 card-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="rectangle-9"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
+          />
+          <p class="text-works-with-7">
+            Who are their best customers?
+            <br />
+            And what's their behavior?
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="group-16 card-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="rectangle-9"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
+          />
+          <p class="text-works-with-9">How often does a customer come back?</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="group-18 card-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="rectangle-9"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify-8"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
+          />
+          <p class="text-works-with-11">
+            What's the impact of offers on sales growth? And more.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ===== SOLUTION ===== -->
+    <section class="solution-section">
+      <div class="text-wrapper-41" data-aos="fade-up">The Solution</div>
+      <p class="text-wrapper-38" data-aos="fade-up" data-aos-delay="80">
+        Wafa isn't just a traditional loyalty program — it's a platform that helps you:
+      </p>
+      <div class="cards-grid solution-grid">
+        <!-- Card 1 -->
+        <div class="group-19 card-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="rectangle-11"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
+          />
+          <p class="text-works-with-12">Analyze customer behavior with precision.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="group-17 card-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="rectangle-11"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify-7"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
+          />
+          <p class="text-works-with-10">Increase customer visit frequency.</p>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="rectangle-10-card card-item"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="rectangle-11"></div>
+          <img
+            alt=""
+            class="vuesax-linear-verify-2s"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
+          />
+          <p class="text-works-with-8">Build a loyalty program easily, tailored to your needs.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===== RESULTS ===== -->
+    <section class="results-section">
+      <div class="frame-15" data-aos="fade-up">
+        <div class="text-wrapper-19">The Result</div>
+        <p class="text-wrapper-20">
+          Boost customer loyalty and repeat visits, in a simple way that fits your business
+        </p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="result-icon-wrap">
+            <div class="vuesax-linear-verify-6 icon-circle">
+              <img
+                alt=""
+                class="vuesax-linear-home"
+                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-home-trend-up.svg"
+              />
+            </div>
+          </div>
+          <div class="frame-18">
+            <div class="text-wrapper-21">Higher Sales</div>
+            <div class="text-wrapper-23">And therefore, higher market value</div>
+          </div>
+          <div class="result-bg"></div>
+        </div>
+        <div class="result-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="result-icon-wrap">
+            <div class="vuesax-linear-verify-5 icon-circle">
+              <img
+                alt=""
+                class="vuesax-linear"
+                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-diagram.svg"
+              />
+            </div>
+          </div>
+          <div class="frame-17">
+            <div class="text-wrapper-21">More Visits</div>
+            <div class="text-wrapper-23">Repeat visits become a habit</div>
+          </div>
+          <div class="result-bg"></div>
+        </div>
+        <div class="result-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="result-icon-wrap">
+            <div class="vuesax-linear-verify-3 icon-circle">
+              <img
+                alt=""
+                class="vuesax-linear-like"
+                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-like.svg"
+              />
+            </div>
+          </div>
+          <div class="frame-16">
+            <div class="text-wrapper-21">More Loyal Customers</div>
+            <p class="text-wrapper-22">Everything is clear and easy from the very first use.</p>
+          </div>
+          <div class="result-bg"></div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CONTACT FORM ===== -->
+    <section class="contact-section" id="contact">
+      <img
+        alt=""
+        class="ellipse-3"
+        src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-7.svg"
+      />
+      <div class="frame-19" data-aos="fade-up" data-aos-duration="800">
+        <!-- Form first in LTR = LEFT -->
+        <div class="frame-20">
+          <form class="frame-21" id="contact-form" novalidate="">
+            <div class="frame-22">
+              <label class="text-wrapper-28" for="brand-name">
+                Brand Name*
+              </label>
+              <div class="frame-23">
+                <input
+                  class="real-input"
+                  id="brand-name"
+                  placeholder="Enter brand name"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <span class="field-error" id="err-brand"> </span>
+            </div>
+            <div class="frame-25">
+              <label class="text-wrapper-28" for="manager-name">
+                Contact Name*
+              </label>
+              <div class="frame-23">
+                <input
+                  class="real-input"
+                  id="manager-name"
+                  placeholder="Enter contact name"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <span class="field-error" id="err-manager"> </span>
+            </div>
+            <div class="frame-26">
+              <label class="text-wrapper-28" for="email">
+                Email Address*
+              </label>
+              <div class="frame-23">
+                <input
+                  class="real-input"
+                  id="email"
+                  placeholder="Enter your email address"
+                  required=""
+                  type="email"
+                />
+              </div>
+              <span class="field-error" id="err-email"> </span>
+            </div>
+            <div class="frame-27">
+              <label class="text-wrapper-28" for="sector"> Sector* </label>
+              <div class="frame-23">
+                <input
+                  class="real-input"
+                  id="sector"
+                  placeholder="Enter your sector"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <span class="field-error" id="err-sector"> </span>
+            </div>
+            <div class="frame-28">
+              <label class="text-wrapper-28" for="city"> City* </label>
+              <div class="frame-23">
+                <input
+                  class="real-input"
+                  id="city"
+                  placeholder="Enter your city"
+                  required=""
+                  type="text"
+                />
+              </div>
+              <span class="field-error" id="err-city"> </span>
+            </div>
+            <div class="frame-29">
+              <label class="text-wrapper-30" for="message">
+                Brief Message
+              </label>
+              <textarea
+                class="real-textarea"
+                id="message"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="form-success" id="form-success">
+              Your request was sent successfully! Our team will contact you within one business day.
+            </div>
+            <button class="button" id="submit-btn" type="submit">
+              <div class="frame-31">
+                <span class="text-wrapper-32"> Send </span>
+              </div>
+            </button>
+          </form>
+        </div>
+        <!-- Info panel second in LTR = RIGHT -->
+        <div class="frame-32">
+          <div class="frame-33">
+            <div class="text-wrapper-33">Ready to activate Wafa for your business</div>
+            <p class="text-wrapper-34">
+              Fill in the details and our team will get in touch within one business day
+            </p>
+          </div>
+          <div class="frame-34">
+            <div class="frame-35">
+              <div class="iconly-bold-message-wrapper">
+                <img
+                  alt=""
+                  class="iconly-bold-message"
+                  src="https://c.animaapp.com/mncbubs9TCSay8/img/iconly-bold-message.svg"
+                />
+              </div>
+              <div class="frame-36">
+                <div class="text-wrapper-35">Our Email</div>
+                <div class="text-wrapper-36">hello@mail.com</div>
+              </div>
+            </div>
+            <div class="frame-35">
+              <div class="iconly-bold-calling-wrapper">
+                <img
+                  alt=""
+                  class="iconly-bold-calling"
+                  src="https://c.animaapp.com/mncbubs9TCSay8/img/iconly-bold-calling.svg"
+                />
+              </div>
+              <div class="frame-36">
+                <div class="text-wrapper-35">Phone</div>
+                <div class="text-wrapper-36">xxxxxxxxxxxxxxxxxx</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Another CTA -->
+      <div class="cta-bottom">
+        <a
+          class="div-wrapper"
+          href="https://portal.wafaapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="close-button-text"> Join the Launch List </span>
+        </a>
+      </div>
+    </section>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-wrap" id="footer">
+      <div class="frame-4">
+        <div class="frame-5">
+          <!-- Logo first in LTR = LEFT -->
+          <div class="frame-13">
+            <img
+              alt="Wafa"
+              class="wafaa-full-logo-2"
+              src="https://c.animaapp.com/mncbubs9TCSay8/img/wafaa-full-logo-1.svg"
+            />
+            <p class="text-wrapper-17">
+              Wafa is a digital loyalty platform that helps brands build lasting
+              relationships with their customers, increase repeat purchases, and
+              turn loyalty into a clear and enjoyable experience — from the
+              first point/stamp to reward redemption.
+            </p>
+          </div>
+          <!-- Columns second in LTR = RIGHT -->
+          <div class="frame-6">
+            <div class="frame-11">
+              <div class="text-wrapper-11">Browse</div>
+              <div class="frame-12-flex">
+                <a class="footer-nav-link" href="#home"> Home </a>
+                <a class="footer-nav-link" href="#how"> How It Works </a>
+                <span class="footer-nav-link footer-link-badge"> Pricing <span class="badge-soon footer-badge"> Soon </span></span>
+                <span class="footer-nav-link footer-link-badge"> Features <span class="badge-soon footer-badge"> Soon </span></span>
+                <a class="footer-nav-link" href="#contact"> Contact Us </a>
+              </div>
+            </div>
+            <div class="frame-10">
+              <div class="text-wrapper-7">Useful Links</div>
+              <div class="frame-8">
+                <a class="text-wrapper-9" href="#"> Privacy Policy </a>
+                <a class="text-wrapper-10" href="#"> Terms &amp; Conditions </a>
+              </div>
+            </div>
+            <div class="frame-7">
+              <div class="text-wrapper-7">Contact &amp; Support</div>
+              <div class="frame-8">
+                <div class="frame-9">
+                  <a class="text-wrapper-8" href="mailto:support@wafa.sa">
+                    support@wafa.sa
+                  </a>
+                </div>
+                <div class="frame-9">
+                  <a class="text-wrapper-8" href="mailto:sales@wafa.sa">
+                    sales@wafa.sa
+                  </a>
+                </div>
+                <img
+                  alt="social media"
+                  class="social"
+                  src="https://c.animaapp.com/mncbubs9TCSay8/img/social.svg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-14">
+          <img
+            alt=""
+            class="line"
+            src="https://c.animaapp.com/mncbubs9TCSay8/img/line-56.svg"
+          />
+          <p class="text-wrapper-18">© Wafa 2026 – All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // ── Hamburger / mobile menu ──
+      const hamburger = document.getElementById("hamburger");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      hamburger.addEventListener("click", () => {
+        const open = mobileNav.classList.toggle("open");
+        hamburger.classList.toggle("open", open);
+        hamburger.setAttribute("aria-expanded", open);
+        mobileNav.setAttribute("aria-hidden", !open);
+      });
+
+      document.querySelectorAll(".mob-link, .mob-cta").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.remove("open");
+          hamburger.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          mobileNav.setAttribute("aria-hidden", "true");
+        });
+      });
+
+      // ── Active nav highlight on scroll ──
+      const sections = ["home", "features", "how", "contact"];
+      const allNavLinks = document.querySelectorAll(".nav-link, .mob-link");
+
+      function setActive(id) {
+        allNavLinks.forEach((l) => {
+          l.classList.toggle("active", l.dataset.section === id);
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) setActive(e.target.id);
+          });
+        },
+        { rootMargin: "-40% 0px -50% 0px" },
+      );
+
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+
+      // ── Smooth scroll ──
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // ── Contact form validation ──
+      const form = document.getElementById("contact-form");
+      const submitBtn = document.getElementById("submit-btn");
+      const successMsg = document.getElementById("form-success");
+
+      function validateField(inputId, errorId, customValidator) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+        if (!input || !error) return true;
+        let msg = "";
+        if (!input.value.trim()) {
+          msg = "This field is required";
+        } else if (customValidator) {
+          msg = customValidator(input.value.trim());
+        }
+        error.textContent = msg;
+        input.closest(".frame-23") &&
+          input.closest(".frame-23").classList.toggle("has-error", !!msg);
+        return !msg;
+      }
+
+      function emailValidator(val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
+          ? ""
+          : "Invalid email address";
+      }
+
+      ["brand-name", "manager-name", "sector", "city"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el)
+          el.addEventListener("input", () =>
+            validateField(
+              id,
+              "err-" +
+                id
+                  .replace("brand-name", "brand")
+                  .replace("manager-name", "manager"),
+            ),
+          );
+      });
+      const emailEl = document.getElementById("email");
+      if (emailEl)
+        emailEl.addEventListener("input", () =>
+          validateField("email", "err-email", emailValidator),
+        );
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const v1 = validateField("brand-name", "err-brand", null);
+        const v2 = validateField("manager-name", "err-manager", null);
+        const v3 = validateField("email", "err-email", emailValidator);
+        const v4 = validateField("sector", "err-sector", null);
+        const v5 = validateField("city", "err-city", null);
+
+        if (!(v1 && v2 && v3 && v4 && v5)) return;
+
+        submitBtn.disabled = true;
+        submitBtn.querySelector(".text-wrapper-32").textContent = "Sending...";
+
+        setTimeout(() => {
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.querySelector(".text-wrapper-32").textContent = "Send";
+          successMsg.classList.add("show");
+          setTimeout(() => successMsg.classList.remove("show"), 5000);
+        }, 1200);
+      });
+
+      // ── Navbar scroll ──
+      const siteHeader = document.querySelector(".site-header");
+      const SCROLL_THRESHOLD = 60;
+
+      function updateNavbar() {
+        siteHeader.classList.toggle(
+          "scrolled",
+          window.scrollY > SCROLL_THRESHOLD,
+        );
+      }
+      window.addEventListener("scroll", updateNavbar, { passive: true });
+      updateNavbar();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 750,
+        once: true,
+        easing: "ease-out-cubic",
+        offset: 80,
+        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      });
+    </script>
+  </body>
+</html>
