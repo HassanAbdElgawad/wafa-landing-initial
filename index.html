@@ -15,11 +15,7 @@
     <header class="site-header" id="top">
       <nav class="nav-container">
         <div class="nav-logo">
-          <img
-            alt="وفاء"
-            class="nav-logo-img"
-            src="imgs/Wafaa Full Logo.svg"
-          />
+          <img alt="وفاء" class="nav-logo-img" src="imgs/Wafaa Full Logo.svg" />
         </div>
         <!-- Desktop Nav Links -->
         <ul class="nav-links" id="nav-links">
@@ -137,93 +133,96 @@
       </div>
       <div class="hero-mockup">
         <img
-          alt="تطبيق وفاء"
-          class="hero-mobile-img"
-          src="imgs/Hero/Top-mobile.png"
-        />
-        <img
           alt="لوحة تحكم وفاء"
           class="hero-tablet-img"
           src="imgs/Hero/Top-Tablet.png"
+        />
+        <img
+          alt="تطبيق وفاء"
+          class="hero-mobile-img"
+          src="imgs/Hero/Top-mobile.png"
         />
       </div>
     </section>
     <!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
     <section class="section stats-section" id="stats">
-      <div class="section-tag-wrapper">
-        <div class="text-wrapper-2">قوة برامج الولاء</div>
+      <div class="stats-header">
+        <h2 class="stats-title">قوة برامج الولاء</h2>
+        <p class="stats-subtitle">
+          برامج الولاء مصممة علمياً لترفع التكرار، تزيد الإنفاق، وتخلي أثر
+          العروض قابل للقياس. إليك بعض الأرقام من جهات بحثية وتقارير رسمية
+        </p>
       </div>
-      <p class="p">
-        برامج الولاء مصممة علمياً لترفع التكرار، تزيد الإنفاق، وتخلي أثر العروض
-        قابل للقياس. إليك بعض الأرقام من جهات بحثية وتقارير رسمية
-      </p>
-      <div class="stats-cards-row">
-        <!-- Card 1 -->
-        <div class="stat-card stat-card--gradient">
-          <div class="stat-card-image">
-            <img
-              alt="قهوة"
-              src="imgs/Stats/Stats-img-one.png"
-              class="stat-card-img"
-            />
-          </div>
-          <img
-            alt=""
-            class="stat-logo-piece"
-            src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-2.svg"
-          />
-          <div class="stat-card-inner">
-            <div class="section-title">
-              <p class="add-voice-and-text">
-                +15% ←+25% نمو سنوي عبر استبدال المكافآت
-              </p>
-            </div>
-            <p class="the-advanced">
+      <div class="stats-grid">
+        <!-- RTL grid: item 1 → top-RIGHT, item 2 → top-LEFT, item 3 → bottom-RIGHT, item 4 → bottom-LEFT -->
+
+        <!-- Top-RIGHT: McKinsey stat card -->
+        <div class="stat-card stat-card--text">
+          <div
+            class="stat-bg-texture"
+            style="
+              background-image: url(&quot;imgs/Stats/background-of-text-1.png&quot;);
+            "
+          ></div>
+          <div class="stat-card-content">
+            <h3 class="stat-headline">
+              +15% ←+25% نمو سنوي<br />عبر استبدال المكافآت
+            </h3>
+            <p class="stat-desc">
               تُظهر الدراسات أن العملاء الذين يقومون باستبدال مكافآت برامج
               الولاء بانتظام يساهمون في تحقيق نمو ملحوظ في الإيرادات لدى الشركات
               ذات برامج الولاء عالية الأداء.
             </p>
-            <div class="stat-source-row">
-              <span class="get-started-now-get"> المصدر </span>
-              <div class="rectangle-3"></div>
+            <div class="stat-source">
+              <span class="stat-source-label">المصدر</span>
+              <div class="stat-source-divider"></div>
               <img
                 alt="McKinsey"
-                class="mckinsey-script-mark"
+                class="stat-source-logo stat-source-logo--mckinsey"
                 src="https://c.animaapp.com/mnw7ax8lttcgkf/img/mckinsey-script-mark-2019-1.svg"
               />
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="stat-card stat-card--gradient">
-          <div class="stat-card-image">
-            <img
-              alt="ستاربكس"
-              src="imgs/Stats/Stats-img-two.png"
-              class="stat-card-img"
-            />
-          </div>
+
+        <!-- Top-LEFT: Barista image card -->
+        <div class="stat-card stat-card--image">
           <img
-            alt=""
-            class="stat-logo-piece"
-            src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-7.svg"
+            src="imgs/Stats/Stats-img-one.png"
+            alt="برامج الولاء"
+            class="stat-photo"
           />
-          <div class="stat-card-inner">
-            <div class="section-title">
-              <p class="add-voice-and-text-2">
-                60٪ من إيرادات ستاربكس في أمريكا
-              </p>
-            </div>
-            <p class="the-advanced">
+        </div>
+
+        <!-- Bottom-RIGHT: Starbucks cup image card -->
+        <div class="stat-card stat-card--image">
+          <img
+            src="imgs/Stats/Stats-img-two.png"
+            alt="ستاربكس"
+            class="stat-photo"
+          />
+        </div>
+
+        <!-- Bottom-LEFT: Starbucks stat card -->
+        <div class="stat-card stat-card--text">
+          <div
+            class="stat-bg-texture"
+            style="
+              background-image: url(&quot;imgs/Stats/background-of-text-2.png&quot;);
+            "
+          ></div>
+          <div class="stat-card-content">
+            <h3 class="stat-headline">60٪ من إيرادات<br />ستاربكس في أمريكا</h3>
+            <p class="stat-desc">
               تأتي من العملاء المنخرطين في برنامج الولاء، مما يعكس الدور الكبير
               الذي تلعبه برامج الولاء في تعزيز المبيعات وتكرار الشراء.
             </p>
-            <div class="stat-source-row">
-              <span class="get-started-now-get"> المصدر </span>
-              <div class="rectangle-3"></div>
+            <div class="stat-source">
+              <span class="stat-source-label">المصدر</span>
+              <div class="stat-source-divider"></div>
               <img
                 alt="Starbucks"
-                class="check-icon-container-inline"
+                class="stat-source-logo stat-source-logo--starbucks"
                 src="https://c.animaapp.com/mnw7ax8lttcgkf/img/check-icon-container.png"
               />
             </div>
@@ -233,38 +232,40 @@
     </section>
     <!-- ═══════════════════════════════ PROBLEM ═══════════════════════════════ -->
     <section class="section problem-section" id="problem">
-      <div class="section-label-pill frame-5">
-        <div class="text-wrapper-3">المشكلة</div>
+      <div class="problem-header">
+        <div class="section-label-pill">
+          <div class="text-wrapper-3">المشكلة</div>
+        </div>
+        <h2 class="text-wrapper-6">
+          كثير من المتاجر لا تملك رؤية واضحة لبياناتها
+        </h2>
+        <p class="text-wrapper-5">
+          بدون أدوات تحليل مناسبة، يصبح من الصعب فهم سلوك العملاء، تأثير العروض،
+          وما الذي يزيد المبيعات فعلاً.
+        </p>
       </div>
-      <h2 class="text-wrapper-6">
-        كثير من المتاجر لا تملك رؤية واضحة لبياناتها
-      </h2>
-      <p class="text-wrapper-5">
-        بدون أدوات تحليل مناسبة، يصبح من الصعب فهم سلوك العملاء، تأثير العروض،
-        وما الذي يزيد المبيعات فعلاً.
-      </p>
       <div class="problem-accordion" id="problem-accordion">
-        <div class="problem-panel active" data-panel="1">
-          <img class="panel-img panel-expanded" src="imgs/Problem/image-1-expanded.png" alt="المشكلة ١" />
-          <img class="panel-img panel-shrinked" src="imgs/Problem/image-1-shrinked.png" alt="" />
-          <button class="panel-toggle" aria-label="تبديل">
-            <img src="imgs/Problem/image-1-up-icon.svg" alt="" />
-          </button>
-        </div>
-        <div class="problem-panel" data-panel="2">
-          <img class="panel-img panel-expanded" src="imgs/Problem/image-2-expanded.png" alt="المشكلة ٢" />
-          <img class="panel-img panel-shrinked" src="imgs/Problem/image-2-shrinked.png" alt="" />
-          <button class="panel-toggle" aria-label="تبديل">
-            <img src="imgs/Problem/image-2-up-icon.svg" alt="" />
-          </button>
-        </div>
-        <div class="problem-panel" data-panel="3">
-          <img class="panel-img panel-expanded" src="imgs/Problem/image-3-expanded.png" alt="المشكلة ٣" />
-          <img class="panel-img panel-shrinked" src="imgs/Problem/image-3-shrinked.png" alt="" />
-          <button class="panel-toggle" aria-label="تبديل">
-            <img src="imgs/Problem/image-3-up-icon.svg" alt="" />
-          </button>
-        </div>
+        <div
+          class="problem-panel"
+          data-panel="1"
+          data-shrinked="imgs/Problem/image-1-shrinked.png"
+          data-expanded="imgs/Problem/image-1-expanded.png"
+          style="background-image: url('imgs/Problem/image-1-shrinked.png')"
+        ></div>
+        <div
+          class="problem-panel"
+          data-panel="2"
+          data-shrinked="imgs/Problem/image-2-shrinked.png"
+          data-expanded="imgs/Problem/image-2-expanded.png"
+          style="background-image: url('imgs/Problem/image-2-shrinked.png')"
+        ></div>
+        <div
+          class="problem-panel active"
+          data-panel="3"
+          data-shrinked="imgs/Problem/image-3-shrinked.png"
+          data-expanded="imgs/Problem/image-3-expanded.png"
+          style="background-image: url('imgs/Problem/image-3-expanded.png')"
+        ></div>
       </div>
     </section>
     <!-- ═══════════════════════════════ SOLUTION ═══════════════════════════════ -->
@@ -272,10 +273,26 @@
       <!-- Visual: phone mockup + floating cards -->
       <div class="solution-visual">
         <div class="solution-phone-wrap">
-          <img class="solution-phone-img" src="imgs/Solution/solution-mobile.png" alt="تطبيق وفاء" />
-          <img class="sol-card sol-card-upper" src="imgs/Solution/solution-upper-card.png" alt="" />
-          <img class="sol-card sol-card-middle" src="imgs/Solution/solution-middle-card.png" alt="" />
-          <img class="sol-card sol-card-lower" src="imgs/Solution/solution-lower-card.png" alt="" />
+          <img
+            class="solution-phone-img"
+            src="imgs/Solution/solution-mobile.png"
+            alt="تطبيق وفاء"
+          />
+          <img
+            class="sol-card sol-card-upper"
+            src="imgs/Solution/solution-upper-card.png"
+            alt=""
+          />
+          <img
+            class="sol-card sol-card-middle"
+            src="imgs/Solution/solution-middle-card.png"
+            alt=""
+          />
+          <img
+            class="sol-card sol-card-lower"
+            src="imgs/Solution/solution-lower-card.png"
+            alt=""
+          />
         </div>
       </div>
       <!-- Dark info card -->
@@ -334,7 +351,11 @@
       <div class="features-cards-row">
         <!-- Card 1 – عملاء -->
         <div class="features-card">
-          <img class="features-card-img" src="imgs/Result/Features Card - 1.png" alt="عملاء" />
+          <img
+            class="features-card-img"
+            src="imgs/Result/Features Card - 1.png"
+            alt="عملاء"
+          />
           <div class="card-title">
             <div class="number-title">
               <div class="analytics-reporting">عملاء أ كثر ولاءً</div>
@@ -350,7 +371,11 @@
         </div>
         <!-- Card 2 – زيارات -->
         <div class="features-card-2">
-          <img class="features-card-img" src="imgs/Result/Features Card - 2.png" alt="زيارات" />
+          <img
+            class="features-card-img"
+            src="imgs/Result/Features Card - 2.png"
+            alt="زيارات"
+          />
           <div class="card-title-2">
             <div class="number-title">
               <div class="analytics-reporting-2">زيارات أ كثر</div>
@@ -366,7 +391,11 @@
         </div>
         <!-- Card 3 – مبيعات -->
         <div class="features-card-3">
-          <img class="features-card-img" src="imgs/Result/Features Card - 3.png" alt="نقاط" />
+          <img
+            class="features-card-img"
+            src="imgs/Result/Features Card - 3.png"
+            alt="نقاط"
+          />
           <div class="card-title-3">
             <div class="number-title-2">
               <div class="analytics-reporting-3">مبيعات أعلى</div>
@@ -824,12 +853,14 @@
               });
             });
           // Problem accordion
-          document.querySelectorAll('.problem-panel').forEach(function(panel) {
-            panel.addEventListener('click', function() {
-              document.querySelectorAll('.problem-panel').forEach(function(p) {
-                p.classList.remove('active');
+          document.querySelectorAll(".problem-panel").forEach(function (panel) {
+            panel.addEventListener("click", function () {
+              document.querySelectorAll(".problem-panel").forEach(function (p) {
+                p.classList.remove("active");
+                p.style.backgroundImage = "url('" + p.dataset.shrinked + "')";
               });
-              panel.classList.add('active');
+              panel.classList.add("active");
+              panel.style.backgroundImage = "url('" + panel.dataset.expanded + "')";
             });
           });
         }
