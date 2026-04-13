@@ -17,70 +17,76 @@ button { cursor: pointer; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #fff;
-  box-shadow: 0 1px 16px rgba(0,0,0,0.08);
+  background: rgba(246, 246, 250, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 12px 24px;
 }
 
 .nav-container {
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 14px 32px;
+  padding: 10px 16px 10px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e8ef;
+  border-radius: 60px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
 }
 
+.nav-logo { display: flex; align-items: center; }
 .nav-logo-img { height: 44px; width: auto; }
 
 .nav-links {
   display: flex;
   list-style: none;
   margin: 0; padding: 0;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
 }
 
 .nav-link {
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: #374151;
   padding: 8px 14px;
-  border-radius: 8px;
+  border-radius: 40px;
   transition: color .2s, background .2s;
   white-space: nowrap;
 }
 .nav-link:hover  { color: #1a202c; background: rgba(0,0,0,0.05); }
 .nav-link.active { color: #467CE9; font-weight: 700; }
 
-/* Decorative asterisk marker for upcoming sections */
+/* Decorative asterisk marker – appears LEFT of text in RTL (after in DOM) */
 .nav-link--marked::after {
   content: "*";
   color: #f97316;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
   margin-right: 2px;
   vertical-align: super;
 }
 
-.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
 
 .nav-cta {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
-  border-radius: 31px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(32,32,32,1) 0%, rgba(0,0,0,1) 100%);
-  box-shadow: 0 0 11.9px #52525263, 0 4px 4px #bebebe40;
+  padding: 10px 22px;
+  border-radius: 40px;
+  background: #111;
   color: #fff;
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
-  transition: opacity .2s;
+  transition: background .2s, opacity .2s;
 }
-.nav-cta:hover { opacity: .85; }
+.nav-cta:hover { background: #222; opacity: .9; }
 
 /* Hamburger */
 .hamburger {
@@ -88,8 +94,8 @@ button { cursor: pointer; }
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   padding: 6px;
   background: none;
   border: none;
@@ -149,8 +155,8 @@ button { cursor: pointer; }
   justify-content: center;
   margin-top: 12px;
   padding: 12px 24px;
-  border-radius: 31px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(32,32,32,1) 0%, rgba(0,0,0,1) 100%);
+  border-radius: 40px;
+  background: #111;
   color: #fff;
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 600;
@@ -1173,6 +1179,8 @@ button { cursor: pointer; }
   .hamburger { display: flex; }
   .nav-links  { display: none; }
   .nav-cta    { display: none; }
+  .site-header { padding: 10px 16px; }
+  .nav-container { border-radius: 40px; padding: 8px 12px; }
 
   .stats-cards-row { grid-template-columns: 1fr; }
   .stat-card { min-height: 380px; }
@@ -1207,7 +1215,8 @@ button { cursor: pointer; }
 }
 
 @media (max-width: 600px) {
-  .nav-container { padding: 12px 20px; }
+  .site-header { padding: 8px 12px; }
+  .nav-container { padding: 8px 10px; border-radius: 32px; }
 
   .section { padding: 48px 20px; }
 
