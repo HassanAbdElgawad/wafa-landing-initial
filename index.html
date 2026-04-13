@@ -3,763 +3,837 @@
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="utf-8" />
-    <title>وفاء – منصة ولاء العملاء</title>
+    <title>وفاء – منصة الولاء الرقمية</title>
     <link href="css/global.css" rel="stylesheet" />
     <link href="css/styleguide.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="/load.js"></script>
     <script src="/static/anima.min.js" type="module"></script>
   </head>
   <body>
-    <!-- ===== HEADER / NAV ===== -->
-    <header class="site-header">
-      <div class="header-inner">
-        <a href="#home" class="logo-link" aria-label="وفاء - الصفحة الرئيسية">
+    <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+    <header class="site-header" id="top">
+      <nav class="nav-container">
+        <div class="nav-logo">
           <img
             alt="وفاء"
-            class="wafaa-full-logo"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/wafaa-full-logo.png"
+            class="nav-logo-img"
+            src="imgs/Wafaa Full Logo.svg"
           />
-        </a>
-        <!-- Desktop nav -->
-        <nav class="desktop-nav" id="desktop-nav">
-          <a class="nav-link active" data-section="home" href="#home">
-            الرئيسية
-          </a>
-          <span class="nav-item-wrap">
-            <a class="nav-link" data-section="how" href="#how"> كيف يعمل </a>
-          </span>
-          <span class="nav-item-wrap">
-            <a class="nav-link" href="javascript:void(0)">
-              الاشتراكات
+        </div>
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links" id="nav-links">
+          <li>
+            <a class="nav-link active" data-section="hero" href="#hero">
+              الرئيسية
             </a>
-            <span class="badge-soon"> قريبا </span>
-          </span>
-          <span class="nav-item-wrap">
-            <a class="nav-link" data-section="features" href="#features">
+          </li>
+          <li>
+            <a
+              class="nav-link nav-link--marked"
+              data-section="features"
+              href="#features"
+            >
               المزايا
             </a>
-            <span class="badge-soon"> قريبا </span>
-          </span>
-          <span class="nav-item-wrap">
-            <a class="nav-link" data-section="contact" href="#contact">
+          </li>
+          <li>
+            <a
+              class="nav-link nav-link--marked"
+              data-section="how-it-works"
+              href="#how-it-works"
+            >
+              كيف بعمل
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-link nav-link--marked"
+              data-section="subscriptions"
+              href="#subscriptions"
+            >
+              الاشتراكات
+            </a>
+          </li>
+          <li>
+            <a
+              class="nav-link nav-link--marked"
+              data-section="contact"
+              href="#contact"
+            >
               تواصل معنا
             </a>
-          </span>
-        </nav>
-        <div class="header-actions">
-          <a class="frame-3 lang-btn" href="index-en.html" style="text-decoration:none;">
-            <span class="close-button-text-2"> EN </span>
-          </a>
-          <a
-            class="frame launch-btn"
-            href="https://portal.wafaapp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="close-button-text"> انضم إلى قائمة الانطلاق </span>
-          </a>
-          <!-- Hamburger -->
+          </li>
+        </ul>
+        <!-- CTA + Hamburger -->
+        <div class="nav-right">
+          <a class="nav-cta" href="#contact"> انضم إلى قائمة الانطلاق </a>
           <button
             aria-expanded="false"
             aria-label="القائمة"
             class="hamburger"
             id="hamburger"
           >
-            <span> </span>
-            <span> </span>
-            <span> </span>
+            <span class="hamburger-bar"> </span>
+            <span class="hamburger-bar"> </span>
+            <span class="hamburger-bar"> </span>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Drawer -->
+      <div aria-hidden="true" class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+          <li>
+            <a class="mobile-nav-link" data-section="hero" href="#hero">
+              الرئيسية
+            </a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" data-section="features" href="#features">
+              المزايا
+            </a>
+          </li>
+          <li>
+            <a
+              class="mobile-nav-link"
+              data-section="how-it-works"
+              href="#how-it-works"
+            >
+              كيف بعمل
+            </a>
+          </li>
+          <li>
+            <a
+              class="mobile-nav-link"
+              data-section="subscriptions"
+              href="#subscriptions"
+            >
+              الاشتراكات
+            </a>
+          </li>
+          <li>
+            <a class="mobile-nav-link" data-section="contact" href="#contact">
+              تواصل معنا
+            </a>
+          </li>
+        </ul>
+        <a class="mobile-cta" href="#contact"> انضم إلى قائمة الانطلاق </a>
+      </div>
+    </header>
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="section hero-section" id="hero">
+      <div class="hero-text-content">
+        <h1 class="hero-title">
+          عميل واحد قد يزورك عشر مرات في الأسبوع... عندما تكسب ولاءه
+        </h1>
+        <p class="hero-subtitle">
+          وفاء يحول بيانات العملاء إلى قرارات تزيد المبيعات.
+        </p>
+        <div class="hero-cta-area">
+          <a class="hero-main-cta" href="#contact">
+            <span class="close-button-text">انضم إلى قائمة الانطلاق</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-mockup">
+        <img
+          alt="لوحة تحكم وفاء"
+          class="hero-tablet-img"
+          src="imgs/Hero/Top-Tablet.png"
+        />
+        <img
+          alt="تطبيق وفاء"
+          class="hero-mobile-img"
+          src="imgs/Hero/Top-mobile.png"
+        />
+      </div>
+    </section>
+    <!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
+    <section class="section stats-section" id="stats">
+      <div class="section-tag-wrapper">
+        <div class="text-wrapper-2">قوة برامج الولاء</div>
+      </div>
+      <p class="p">
+        برامج الولاء مصممة علمياً لترفع التكرار، تزيد الإنفاق، وتخلي أثر العروض
+        قابل للقياس. إليك بعض الأرقام من جهات بحثية وتقارير رسمية
+      </p>
+      <div class="stats-cards-row">
+        <!-- Card 1 -->
+        <div class="stat-card stat-card--gradient">
+          <div class="stat-card-image">
+            <img
+              alt="قهوة"
+              src="imgs/Stats/Stats-img-one.png"
+              class="stat-card-img"
+            />
+          </div>
+          <img
+            alt=""
+            class="stat-logo-piece"
+            src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-2.svg"
+          />
+          <div class="stat-card-inner">
+            <div class="section-title">
+              <p class="add-voice-and-text">
+                +15% ←+25% نمو سنوي عبر استبدال المكافآت
+              </p>
+            </div>
+            <p class="the-advanced">
+              تُظهر الدراسات أن العملاء الذين يقومون باستبدال مكافآت برامج
+              الولاء بانتظام يساهمون في تحقيق نمو ملحوظ في الإيرادات لدى الشركات
+              ذات برامج الولاء عالية الأداء.
+            </p>
+            <div class="stat-source-row">
+              <span class="get-started-now-get"> المصدر </span>
+              <div class="rectangle-3"></div>
+              <img
+                alt="McKinsey"
+                class="mckinsey-script-mark"
+                src="https://c.animaapp.com/mnw7ax8lttcgkf/img/mckinsey-script-mark-2019-1.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="stat-card stat-card--gradient">
+          <div class="stat-card-image">
+            <img
+              alt="ستاربكس"
+              src="imgs/Stats/Stats-img-two.png"
+              class="stat-card-img"
+            />
+          </div>
+          <img
+            alt=""
+            class="stat-logo-piece"
+            src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-7.svg"
+          />
+          <div class="stat-card-inner">
+            <div class="section-title">
+              <p class="add-voice-and-text-2">
+                60٪ من إيرادات ستاربكس في أمريكا
+              </p>
+            </div>
+            <p class="the-advanced">
+              تأتي من العملاء المنخرطين في برنامج الولاء، مما يعكس الدور الكبير
+              الذي تلعبه برامج الولاء في تعزيز المبيعات وتكرار الشراء.
+            </p>
+            <div class="stat-source-row">
+              <span class="get-started-now-get"> المصدر </span>
+              <div class="rectangle-3"></div>
+              <img
+                alt="Starbucks"
+                class="check-icon-container-inline"
+                src="https://c.animaapp.com/mnw7ax8lttcgkf/img/check-icon-container.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════ PROBLEM ═══════════════════════════════ -->
+    <section class="section problem-section" id="problem">
+      <div class="section-label-pill frame-5">
+        <div class="text-wrapper-3">المشكلة</div>
+      </div>
+      <h2 class="text-wrapper-6">
+        كثير من المتاجر لا تملك رؤية واضحة لبياناتها
+      </h2>
+      <p class="text-wrapper-5">
+        بدون أدوات تحليل مناسبة، يصبح من الصعب فهم سلوك العملاء، تأثير العروض،
+        وما الذي يزيد المبيعات فعلاً.
+      </p>
+      <div class="problem-accordion" id="problem-accordion">
+        <div class="problem-panel active" data-panel="1">
+          <img class="panel-img panel-expanded" src="imgs/Problem/image-1-expanded.png" alt="المشكلة ١" />
+          <img class="panel-img panel-shrinked" src="imgs/Problem/image-1-shrinked.png" alt="" />
+          <button class="panel-toggle" aria-label="تبديل">
+            <img src="imgs/Problem/image-1-up-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="problem-panel" data-panel="2">
+          <img class="panel-img panel-expanded" src="imgs/Problem/image-2-expanded.png" alt="المشكلة ٢" />
+          <img class="panel-img panel-shrinked" src="imgs/Problem/image-2-shrinked.png" alt="" />
+          <button class="panel-toggle" aria-label="تبديل">
+            <img src="imgs/Problem/image-2-up-icon.svg" alt="" />
+          </button>
+        </div>
+        <div class="problem-panel" data-panel="3">
+          <img class="panel-img panel-expanded" src="imgs/Problem/image-3-expanded.png" alt="المشكلة ٣" />
+          <img class="panel-img panel-shrinked" src="imgs/Problem/image-3-shrinked.png" alt="" />
+          <button class="panel-toggle" aria-label="تبديل">
+            <img src="imgs/Problem/image-3-up-icon.svg" alt="" />
           </button>
         </div>
       </div>
-      <!-- Mobile nav drawer -->
-      <nav aria-hidden="true" class="mobile-nav" id="mobile-nav">
-        <a class="mob-link active" data-section="home" href="#home">
-          الرئيسية
-        </a>
-        <a class="mob-link" data-section="how" href="#how"> كيف يعمل </a>
-        <a class="mob-link" data-section="pricing" href="#pricing">
-          الاشتراكات
-          <span class="badge-soon-mob"> قريبا </span>
-        </a>
-        <a class="mob-link" data-section="features" href="#features">
-          المزايا
-          <span class="badge-soon-mob"> قريبا </span>
-        </a>
-        <a class="mob-link" data-section="contact" href="#contact">
-          تواصل معنا
-        </a>
-        <a
-          class="mob-cta"
-          href="https://portal.wafaapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          انضم إلى قائمة الانطلاق
-        </a>
-      </nav>
-    </header>
-    <!-- ===== HERO ===== -->
-    <section class="hero-section" id="home">
-      <p class="p" data-aos="fade-up" data-aos-duration="800">
-        <span class="span"> عميل </span>
-        <span class="text-wrapper-3"> واحد </span>
-        <span class="span"> ممكن يزورك عشر مرات </span>
-        <span class="text-wrapper-3"> في الأسبوع </span>
-        <span class="span"> إذا عرفت تكسب ولاءه </span>
-      </p>
-      <p
-        class="text-wrapper-4"
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-delay="100"
-      >
-        وفاء يحول بيانات العملاء إلى قرارات تزيد المبيعات.
-      </p>
-      <div
-        class="hero-cta-row"
-        id="launch"
-        data-aos="fade-up"
-        data-aos-duration="700"
-        data-aos-delay="200"
-      >
-        <a
-          class="close-button-text-wrapper"
-          href="https://portal.wafaapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="close-button-text"> انضم إلى قائمة الانطلاق </span>
-        </a>
-      </div>
-      <!-- MacBook mockup -->
-      <div
-        class="frame-2"
-        data-aos="zoom-in"
-        data-aos-duration="900"
-        data-aos-delay="150"
-      >
-        <div class="shadow"></div>
-        <div class="top">
-          <img
-            alt=""
-            class="lid"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/lid.png"
-          />
-          <div class="screen-wrap">
-            <img
-              alt="لقطة شاشة"
-              class="image"
-              src="https://c.animaapp.com/mncbubs9TCSay8/img/image-48.png"
-            />
-          </div>
-          <div class="text-wrapper">Macbook Pro</div>
+    </section>
+    <!-- ═══════════════════════════════ SOLUTION ═══════════════════════════════ -->
+    <section class="section solution-section" id="solution">
+      <!-- Visual: phone mockup + floating cards -->
+      <div class="solution-visual">
+        <div class="solution-phone-wrap">
+          <img class="solution-phone-img" src="imgs/Solution/solution-mobile.png" alt="تطبيق وفاء" />
+          <img class="sol-card sol-card-upper" src="imgs/Solution/solution-upper-card.png" alt="" />
+          <img class="sol-card sol-card-middle" src="imgs/Solution/solution-middle-card.png" alt="" />
+          <img class="sol-card sol-card-lower" src="imgs/Solution/solution-lower-card.png" alt="" />
         </div>
+      </div>
+      <!-- Dark info card -->
+      <div class="solution-card frame-4-new">
+        <div class="solution-bg-rect"></div>
         <img
           alt=""
-          class="bottom"
-          src="https://c.animaapp.com/mncbubs9TCSay8/img/bottom.png"
+          class="solution-logo-piece"
+          src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-7.svg"
         />
-        <img
-          alt=""
-          class="img"
-          src="https://c.animaapp.com/mncbubs9TCSay8/img/frame-1261154387-1.png"
-        />
-        <img
-          alt=""
-          class="rectangle-2"
-          src="https://c.animaapp.com/mncbubs9TCSay8/img/rectangle-1.png"
-        />
-        <div class="rectangle-3"></div>
-        <div class="group">
-          <div class="rectangle-4"></div>
-          <div class="text-wrapper-2">قريبا ...</div>
+        <div class="solution-label div-wrapper">
+          <div class="text-wrapper-3">الحل</div>
         </div>
-        <div class="group-2">
-          <div class="rectangle-4"></div>
-          <div class="text-wrapper-2">قريبا ...</div>
-        </div>
-      </div>
-    </section>
-    <!-- ===== LOYALTY POWER ===== -->
-    <section class="loyalty-section" id="features">
-      <div class="text-wrapper-6" data-aos="fade-up">قوة برامج الولاء</div>
-      <p class="text-wrapper-5" data-aos="fade-up" data-aos-delay="100">
-        نص لوريم إيبسوم هو نوع من النصوص المؤقتة المستخدمة بشكل شائع في صناعات
-        التصميم والنشر لملء مساحة على الصفحة وإعطاء انطباع عن الشكل النهائي
-        للمحتوى.
-      </p>
-      <!-- Stat card 1 -->
-      <div class="container" data-aos="fade-up" data-aos-duration="800">
-        <div class="border"></div>
-        <div class="stat-card-layout stat-card-layout--alt">
-          <img
-            alt=""
-            class="ellipse"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-137.png"
-          />
-          <div class="stat-text-col">
-            <p class="text-works-with">15%+ إلى + 25 % زيادة سنوية</p>
-            <p class="text-works-with-2">
-              في الإيرادات من العملاء الذين يستبدلون المكافآت في برامج الولاء
-              الأعلى أداءً
-            </p>
-            <div class="stat-source">
-              <div class="text-works-with-3">المصدر</div>
-              <img
-                alt=""
-                class="image-2"
-                src="https://c.animaapp.com/mncbubs9TCSay8/img/image-49.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Stat card 2 -->
-      <div
-        class="container-2"
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-delay="100"
-      >
-        <div class="border-2"></div>
-        <div class="stat-card-layout">
-          <img
-            alt=""
-            class="ellipse-2"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-137-1.png"
-          />
-          <div class="stat-text-col">
-            <div class="text-works-with-4">60% من إيرادات ستاربكس</div>
-            <p class="text-works-with-5">
-              في أمريكا جاءت من أعضاء برنامج الولاء
-            </p>
-            <div class="stat-source">
-              <div class="text-works-with-6">المصدر</div>
-              <div class="group-4"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ===== PROBLEM ===== -->
-    <section class="problem-section" id="how">
-      <div class="text-wrapper-40" data-aos="fade-up">المشكلة</div>
-      <p class="text-wrapper-37" data-aos="fade-up" data-aos-delay="80">
-        كثير من المتاجر ما تعرف
-      </p>
-      <p class="text-wrapper-39" data-aos="fade-up" data-aos-delay="160">
-        بدون بيانات… التسويق يصير تخمين !
-      </p>
-      <div class="cards-grid problem-grid">
-        <!-- Card 1 -->
-        <div class="group-15 card-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="rectangle-9"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
-          />
-          <p class="text-works-with-7">
-            من هم أفضل عملائها؟
-            <br />
-            وكيف سلوكهم؟
-          </p>
-        </div>
-        <!-- Card 2 -->
-        <div class="group-16 card-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="rectangle-9"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
-          />
-          <p class="text-works-with-9">كم مرة يكرر العميل الشراء؟</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="group-18 card-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="rectangle-9"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify-8"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify-1.svg"
-          />
-          <p class="text-works-with-11">
-            وأثر العروض على زيادة المبيعات؟ وغيرها
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- ===== SOLUTION ===== -->
-    <section class="solution-section">
-      <div class="text-wrapper-41" data-aos="fade-up">الحل</div>
-      <p class="text-wrapper-38" data-aos="fade-up" data-aos-delay="80">
-        وفاء ليس مجرد برنامج نظام وفاء تقليدي ! بل منصة تساعدك على:
-      </p>
-      <div class="cards-grid solution-grid">
-        <!-- Card 1 -->
-        <div class="group-19 card-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="rectangle-11"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
-          />
-          <p class="text-works-with-12">تحليل سلوك العملاء بدقة فائقة.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="group-17 card-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="rectangle-11"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify-7"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
-          />
-          <p class="text-works-with-10">زيادة معدل تكرار زيارة العملاء.</p>
-        </div>
-        <!-- Card 3 -->
-        <div
-          class="rectangle-10-card card-item"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="rectangle-11"></div>
-          <img
-            alt=""
-            class="vuesax-linear-verify-2s"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-verify.svg"
-          />
-          <p class="text-works-with-8">بناء برنامج ولاء بسهولة وفق احتياجك.</p>
-        </div>
-      </div>
-    </section>
-    <!-- ===== RESULTS ===== -->
-    <section class="results-section">
-      <div class="frame-15" data-aos="fade-up">
-        <div class="text-wrapper-19">النتيجة</div>
-        <p class="text-wrapper-20">
-          زيادة ولاء العملاء وتكرار الزيارة، بأسلوب سهل ومناسب لنشاطك
+        <p class="solution-title text-wrapper-4">
+          وفاء ليس مجرد برنامج ولاء تقليدي ! بل منصة تساعدك على:
         </p>
       </div>
-      <div class="results-grid">
-        <div class="result-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="result-icon-wrap">
-            <div class="vuesax-linear-verify-6 icon-circle">
-              <img
-                alt=""
-                class="vuesax-linear-home"
-                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-home-trend-up.svg"
-              />
-            </div>
-          </div>
-          <div class="frame-18">
-            <div class="text-wrapper-21">مبيعات أعلى</div>
-            <div class="text-wrapper-23">وبالتالي قيمة سوقية أعلى</div>
-          </div>
-          <div class="result-bg"></div>
-        </div>
-        <div class="result-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="result-icon-wrap">
-            <div class="vuesax-linear-verify-5 icon-circle">
-              <img
-                alt=""
-                class="vuesax-linear"
-                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-diagram.svg"
-              />
-            </div>
-          </div>
-          <div class="frame-17">
-            <div class="text-wrapper-21">زيارات أ كثر</div>
-            <div class="text-wrapper-23">تكرار الزيارات يصير عادة</div>
-          </div>
-          <div class="result-bg"></div>
-        </div>
-        <div class="result-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="result-icon-wrap">
-            <div class="vuesax-linear-verify-3 icon-circle">
-              <img
-                alt=""
-                class="vuesax-linear-like"
-                src="https://c.animaapp.com/mncbubs9TCSay8/img/vuesax-linear-like.svg"
-              />
-            </div>
-          </div>
-          <div class="frame-16">
-            <div class="text-wrapper-21">عملاء أ كثر ولاءً</div>
-            <p class="text-wrapper-22">كل شي مفهوم وسهل من أول استخدام.</p>
-          </div>
-          <div class="result-bg"></div>
-        </div>
+      <!-- Bullets card -->
+      <div class="solution-bullets-card">
+        <ul class="solution-bullets">
+          <li class="solution-bullet">
+            <img
+              alt=""
+              class="solution-bullet-icon"
+              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group.png"
+            />
+            <span>بناء برنامج ولاء بسهولة وفق احتياجك.</span>
+          </li>
+          <li class="solution-bullet">
+            <img
+              alt=""
+              class="solution-bullet-icon"
+              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group-1.png"
+            />
+            <span>زيادة معدل تكرار زيارة العملاء.</span>
+          </li>
+          <li class="solution-bullet">
+            <img
+              alt=""
+              class="solution-bullet-icon"
+              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group-2.png"
+            />
+            <span>تحليل سلوك العملاء بدقة فائقة.</span>
+          </li>
+        </ul>
       </div>
     </section>
-    <!-- ===== CONTACT FORM ===== -->
-    <section class="contact-section" id="contact">
-      <img
-        alt=""
-        class="ellipse-3"
-        src="https://c.animaapp.com/mncbubs9TCSay8/img/ellipse-7.svg"
-      />
-      <div class="frame-19" data-aos="fade-up" data-aos-duration="800">
-        <!-- Info panel -->
-        <div class="frame-32">
-          <div class="frame-33">
-            <div class="text-wrapper-33">جاهزين نفعّل وفاء عندكم</div>
-            <p class="text-wrapper-34">
-              عبي البيانات وبيتواصل معك فريقنا خلال يوم عمل
+    <!-- ═══════════════════════════════ RESULT ═══════════════════════════════ -->
+    <section class="section result-section" id="result">
+      <div class="section-label-pill frame-35">
+        <div class="text-wrapper-24">النتيجة</div>
+      </div>
+      <h2 class="text-wrapper-25">
+        زيادة ولاء العملاء وتكرار الزيارة،&nbsp;&nbsp;بأسلوب سهل ومناسب لنشاطك
+      </h2>
+      <div class="features-cards-row">
+        <!-- Card 1 – عملاء -->
+        <div class="features-card">
+          <img class="features-card-img" src="imgs/Result/Features Card - 1.png" alt="عملاء" />
+          <div class="card-title">
+            <div class="number-title">
+              <div class="analytics-reporting">عملاء أ كثر ولاءً</div>
+              <div class="element-wrapper">
+                <div class="element">01</div>
+              </div>
+            </div>
+            <p class="these-tools">
+              تحليل سلوك العملاء وتتبع تاريخ مشترياتهم يساعدك تبني علاقات أقوى
+              وتزيد ولاءهم.
             </p>
           </div>
-          <div class="frame-34">
-            <div class="frame-35">
-              <div class="iconly-bold-message-wrapper">
-                <img
-                  alt=""
-                  class="iconly-bold-message"
-                  src="https://c.animaapp.com/mncbubs9TCSay8/img/iconly-bold-message.svg"
-                />
-              </div>
-              <div class="frame-36">
-                <div class="text-wrapper-35">بريدنا الإلكتروني</div>
-                <div class="text-wrapper-36">hello@mail.com</div>
+        </div>
+        <!-- Card 2 – زيارات -->
+        <div class="features-card-2">
+          <img class="features-card-img" src="imgs/Result/Features Card - 2.png" alt="زيارات" />
+          <div class="card-title-2">
+            <div class="number-title">
+              <div class="analytics-reporting-2">زيارات أ كثر</div>
+              <div class="background-2">
+                <div class="element-2">02</div>
               </div>
             </div>
-            <div class="frame-35">
-              <div class="iconly-bold-calling-wrapper">
-                <img
-                  alt=""
-                  class="iconly-bold-calling"
-                  src="https://c.animaapp.com/mncbubs9TCSay8/img/iconly-bold-calling.svg"
-                />
-              </div>
-              <div class="frame-36">
-                <div class="text-wrapper-35">هاتف</div>
-                <div class="text-wrapper-36">xxxxxxxxxxxxxxxxxx</div>
-              </div>
-            </div>
+            <p class="these-tools-2">
+              فهم تكرار الشراء وأنماط العملاء يساعدك تطلق عروض وحملات تجيب
+              العملاء مرة أخرى.
+            </p>
           </div>
         </div>
-        <!-- Form -->
-        <div class="frame-20">
-          <form class="frame-21" id="contact-form" novalidate="">
-            <div class="frame-22">
-              <label class="text-wrapper-28" for="brand-name">
-                اسم العلامة التجارية*
-              </label>
-              <div class="frame-23">
-                <input
-                  class="real-input"
-                  id="brand-name"
-                  placeholder="أدخل اسم العلامة التجارية"
-                  required=""
-                  type="text"
-                />
+        <!-- Card 3 – مبيعات -->
+        <div class="features-card-3">
+          <img class="features-card-img" src="imgs/Result/Features Card - 3.png" alt="نقاط" />
+          <div class="card-title-3">
+            <div class="number-title-2">
+              <div class="analytics-reporting-3">مبيعات أعلى</div>
+              <div class="background-3">
+                <div class="element-3">03</div>
               </div>
-              <span class="field-error" id="err-brand"> </span>
             </div>
-            <div class="frame-25">
-              <label class="text-wrapper-28" for="manager-name">
-                اسم المسؤول*
-              </label>
-              <div class="frame-23">
-                <input
-                  class="real-input"
-                  id="manager-name"
-                  placeholder="أدخل اسم المسؤول"
-                  required=""
-                  type="text"
-                />
+            <p class="these-tools-3">
+              تقارير دقيقة عن الأداء والعروض تمكنك من اتخاذ قرارات تزيد
+              المبيعات.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /.features-cards-row -->
+      <!-- Loyalty stamp widget -->
+      <div class="stamp-pack">
+        <div class="frame-23">
+          <div class="detailed-item-name">مشروب ساخن مجاني</div>
+          <p class="detailed-item-name-2">
+            احصل على مشروب ساخن مجاني عند إتمام 10 طلبات من قسم المشروبات
+            الساخنة
+          </p>
+        </div>
+        <img
+          alt=""
+          class="frame-37"
+          src="https://c.animaapp.com/mnw7ax8lttcgkf/img/frame-2147234583.svg"
+        />
+      </div>
+      <!-- Phone mockup group -->
+      <img
+        alt=""
+        class="group-3"
+        src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group-1597884482.png"
+      />
+    </section>
+    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+    <section class="section contact-section" id="contact">
+      <div class="frame-9">
+        <div class="frame-10">
+          <form class="frame-11" id="contact-form" novalidate="">
+            <div class="frame-12">
+              <div class="text-wrapper-7">اسم العلامة التجارية*</div>
+              <div class="frame-13">
+                <div class="frame-14">
+                  <input
+                    class="real-input"
+                    id="brand"
+                    name="brand"
+                    placeholder="أدخل اسم العلامة التجارية"
+                    required=""
+                    type="text"
+                    fdprocessedid="id7p69"
+                  />
+                </div>
               </div>
-              <span class="field-error" id="err-manager"> </span>
+              <span class="field-error" id="brand-error"> </span>
             </div>
-            <div class="frame-26">
-              <label class="text-wrapper-28" for="email">
-                البريد الإلكتروني*
-              </label>
-              <div class="frame-23">
-                <input
-                  class="real-input"
-                  id="email"
-                  placeholder="أدخل عنوان بريدك الإلكتروني"
-                  required=""
-                  type="email"
-                />
+            <div class="frame-15">
+              <div class="text-wrapper-7">اسم المسؤول*</div>
+              <div class="frame-13">
+                <div class="frame-14">
+                  <input
+                    class="real-input"
+                    id="manager"
+                    name="manager"
+                    placeholder="أدخل اسم المسؤول"
+                    required=""
+                    type="text"
+                    fdprocessedid="ibtazm"
+                  />
+                </div>
               </div>
-              <span class="field-error" id="err-email"> </span>
+              <span class="field-error" id="manager-error"> </span>
             </div>
-            <div class="frame-27">
-              <label class="text-wrapper-28" for="sector"> القطاع* </label>
-              <div class="frame-23">
-                <input
-                  class="real-input"
-                  id="sector"
-                  placeholder="أدخل عنوان القطاع"
-                  required=""
-                  type="text"
-                />
+            <div class="frame-16">
+              <div class="text-wrapper-7">البريد الإلكتروني*</div>
+              <div class="frame-13">
+                <div class="frame-14">
+                  <input
+                    class="real-input"
+                    id="email"
+                    name="email"
+                    placeholder="أدخل عنوان بريدك الإلكتروني"
+                    required=""
+                    type="email"
+                    fdprocessedid="7xv4o"
+                  />
+                </div>
               </div>
-              <span class="field-error" id="err-sector"> </span>
+              <span class="field-error" id="email-error"> </span>
             </div>
-            <div class="frame-28">
-              <label class="text-wrapper-28" for="city"> المدينة* </label>
-              <div class="frame-23">
-                <input
-                  class="real-input"
-                  id="city"
-                  placeholder="أدخل عنوان المدينة"
-                  required=""
-                  type="text"
-                />
+            <div class="frame-17">
+              <div class="text-wrapper-7">القطاع*</div>
+              <div class="frame-13">
+                <div class="frame-14">
+                  <input
+                    class="real-input"
+                    id="sector"
+                    name="sector"
+                    placeholder="أدخل عنوان القطاع"
+                    required=""
+                    type="text"
+                    fdprocessedid="1oitbm"
+                  />
+                </div>
               </div>
-              <span class="field-error" id="err-city"> </span>
+              <span class="field-error" id="sector-error"> </span>
             </div>
-            <div class="frame-29">
-              <label class="text-wrapper-30" for="message">
-                رسالة مختصرة
-              </label>
-              <textarea
-                class="real-textarea"
-                id="message"
-                placeholder="أدخل رسالتك"
-              ></textarea>
+            <div class="frame-18">
+              <div class="text-wrapper-7">المدينة*</div>
+              <div class="frame-13">
+                <div class="frame-14">
+                  <input
+                    class="real-input"
+                    id="city"
+                    name="city"
+                    placeholder="أدخل عنوان المدينة"
+                    required=""
+                    type="text"
+                    fdprocessedid="hptueq"
+                  />
+                </div>
+              </div>
+              <span class="field-error" id="city-error"> </span>
             </div>
-            <div class="form-success" id="form-success">
-              تم إرسال طلبك بنجاح! سيتواصل معك فريقنا خلال يوم عمل.
+            <div class="frame-19">
+              <div class="text-wrapper-9">رسالة مختصرة</div>
+              <div class="frame-20">
+                <textarea
+                  class="real-textarea"
+                  id="message"
+                  name="message"
+                  placeholder="أدخل رسالتك"
+                  rows="4"
+                ></textarea>
+              </div>
             </div>
-            <button class="button" id="submit-btn" type="submit">
-              <div class="frame-31">
-                <span class="text-wrapper-32"> إرسال </span>
+            <!-- Success banner (hidden by default) -->
+            <div class="form-success" id="form-success" style="display: none">
+              ✅ تم إرسال طلبك بنجاح! سيتواصل معك فريقنا قريباً.
+            </div>
+            <button
+              class="button"
+              id="submit-btn"
+              type="submit"
+              fdprocessedid="fq4xki"
+            >
+              <div class="frame-21">
+                <div class="text-wrapper-11" id="submit-label">إرسال</div>
               </div>
             </button>
           </form>
         </div>
-      </div>
-      <!-- Another CTA -->
-      <div class="cta-bottom">
-        <a
-          class="div-wrapper"
-          href="https://portal.wafaapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="close-button-text"> انضم إلى قائمة الانطلاق </span>
-        </a>
-      </div>
-    </section>
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer-wrap" id="footer">
-      <div class="frame-4">
-        <div class="frame-5">
-          <div class="frame-13">
-            <img
-              alt="وفاء"
-              class="wafaa-full-logo-2"
-              src="https://c.animaapp.com/mncbubs9TCSay8/img/wafaa-full-logo-1.svg"
-            />
-            <p class="text-wrapper-17">
-              وفاء منصة ولاء رقمية تساعد العلامات التجارية على بناء علاقة مستمرة
-              مع عملائها، وزيادة تكرار الشراء، وتحويل الولاء إلى تجربة واضحة
-              وممتعة—من أول نقطة/ختم إلى استبدال المكافأة.
+        <!-- /.frame-10 -->
+        <div class="frame-22">
+          <div class="frame-23">
+            <div class="text-wrapper-12">اتصل بنا</div>
+            <p class="text-wrapper-13">
+              نحن هنا لمساعدتك على الانطلاق مع "وفاء" بكل سهولة ✨
+              <br />
+              تواصل معنا الآن لنشرح لك كيف يمكنك جذب زبنائك وتشجيعهم على العودة
+              بطريقة ذكية وبسيطة.
+              <br />
+              <br />
+              فريقنا جاهز لمرافقتك خطوة بخطوة حتى تبدأ في تحقيق نتائج ملموسة
+              بسرعة 🚀
             </p>
           </div>
-          <div class="frame-6">
-            <div class="frame-11">
-              <div class="text-wrapper-11">التصفح</div>
-              <div class="frame-12-flex">
-                <a class="footer-nav-link" href="#home"> الرئيسية </a>
-                <a class="footer-nav-link" href="#how"> كيف يعمل </a>
-                <span class="footer-nav-link footer-link-badge"> الاشتراكات <span class="badge-soon footer-badge"> قريبا </span></span>
-                <span class="footer-nav-link footer-link-badge"> المزايا <span class="badge-soon footer-badge"> قريبا </span></span>
-                <a class="footer-nav-link" href="#contact"> تواصل معنا </a>
-              </div>
-            </div>
-            <div class="frame-10">
-              <div class="text-wrapper-7">روابط تهمك</div>
-              <div class="frame-8">
-                <a class="text-wrapper-9" href="#"> سياسة الخصوصية </a>
-                <a class="text-wrapper-10" href="#"> الشروط والأحكام </a>
-              </div>
-            </div>
-            <div class="frame-7">
-              <div class="text-wrapper-7">التواصل والدعم</div>
-              <div class="frame-8">
-                <div class="frame-9">
-                  <a class="text-wrapper-8" href="mailto:support@wafa.sa">
-                    support@wafa.sa
-                  </a>
-                </div>
-                <div class="frame-9">
-                  <a class="text-wrapper-8" href="mailto:sales@wafa.sa">
-                    sales@wafa.sa
-                  </a>
-                </div>
+          <div class="frame-24">
+            <div class="frame-25">
+              <div class="iconly-bold-message-wrapper">
                 <img
-                  alt="social media"
-                  class="social"
-                  src="https://c.animaapp.com/mncbubs9TCSay8/img/social.svg"
+                  alt=""
+                  class="iconly-bold-message"
+                  src="imgs/Contact/mail.svg"
                 />
+              </div>
+              <div class="frame-26">
+                <div class="text-wrapper-14">بريدنا الإلكتروني</div>
+                <div class="text-wrapper-15">wwww.lamdax.sa</div>
+              </div>
+            </div>
+            <div class="frame-25">
+              <div class="iconly-bold-calling-wrapper">
+                <img
+                  alt=""
+                  class="iconly-bold-calling"
+                  src="imgs/Contact/phone.svg"
+                />
+              </div>
+              <div class="frame-26">
+                <div class="text-wrapper-14">هاتف</div>
+                <p class="text-wrapper-15">+966 50 335 5729</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="frame-14">
+        <!-- /.frame-22 -->
+      </div>
+      <!-- /.frame-9 -->
+    </section>
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="site-footer-section" id="footer">
+      <div class="frame-27">
+        <div class="frame-28">
+          <div class="frame-29">
+            <div class="frame-30">
+              <div class="text-wrapper-16">التواصل والدعم</div>
+              <div class="frame-31">
+                <div class="frame-32">
+                  <div class="text-wrapper-17">info@lamdax.sa</div>
+                </div>
+                <div class="text-wrapper-18">wwww.lamdax.sa</div>
+                <div class="frame-32">
+                  <p class="text-wrapper-17">+966 50 335 5729</p>
+                </div>
+              </div>
+            </div>
+            <div class="frame-30">
+              <div class="text-wrapper-16">الروابط القانونية</div>
+              <div class="frame-31">
+                <a class="text-wrapper-19 footer-link" href="#">
+                  سياسة الخصوصية
+                </a>
+                <a class="text-wrapper-20 footer-link" href="#">
+                  الشروط والأحكام
+                </a>
+              </div>
+            </div>
+            <div class="frame-30">
+              <div class="text-wrapper-16">روابط التنقّل الأساسية</div>
+              <div class="frame-31">
+                <a class="text-wrapper-19 footer-link" href="#hero">
+                  الرئيسية
+                </a>
+                <a class="text-wrapper-20 footer-link" href="#result">
+                  المزايا
+                </a>
+                <a class="text-wrapper-20 footer-link" href="#problem">
+                  التطبيقات
+                </a>
+                <a class="text-wrapper-21 footer-link" href="#stats">
+                  من نحن
+                </a>
+                <a class="text-wrapper-21 footer-link" href="#contact">
+                  تواصل للاشتراك
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="frame-33">
+            <img
+              alt="وفاء"
+              class="wafaa-full-logo"
+              src="imgs/Wafaa Full Logo.svg"
+            />
+            <p class="text-wrapper-22">
+              وفاء منصة ولاء رقمية تساعدك على بناء علاقة مستمرة مع العملاء، مع
+              بيانات تساعدك تتخذ قرار أسرع
+            </p>
+          </div>
+        </div>
+        <div class="frame-34">
           <img
             alt=""
             class="line"
-            src="https://c.animaapp.com/mncbubs9TCSay8/img/line-56.svg"
+            src="https://c.animaapp.com/mnw7ax8lttcgkf/img/line-56.svg"
           />
-          <p class="text-wrapper-18">© وفاء 2026 – جميع الحقوق محفوظة</p>
+          <p class="text-wrapper-23">© وفاء 2026 – جميع الحقوق محفوظة</p>
         </div>
       </div>
     </footer>
+    <!-- Mobile menu overlay backdrop -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
     <script>
-      // ── Hamburger / mobile menu ──
-      const hamburger = document.getElementById("hamburger");
-      const mobileNav = document.getElementById("mobile-nav");
+      (function () {
+        // ── Hamburger / Mobile Menu ──────────────────────────────────────────────
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const overlay = document.getElementById("mobile-overlay");
+        const mobileLinks = document.querySelectorAll(
+          ".mobile-nav-link, .mobile-cta",
+        );
 
-      hamburger.addEventListener("click", () => {
-        const open = mobileNav.classList.toggle("open");
-        hamburger.classList.toggle("open", open);
-        hamburger.setAttribute("aria-expanded", open);
-        mobileNav.setAttribute("aria-hidden", !open);
-      });
-
-      // Close mobile nav on link click
-      document.querySelectorAll(".mob-link, .mob-cta").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileNav.classList.remove("open");
-          hamburger.classList.remove("open");
-          hamburger.setAttribute("aria-expanded", "false");
-          mobileNav.setAttribute("aria-hidden", "true");
-        });
-      });
-
-      // ── Active nav highlight on scroll ──
-      const sections = ["home", "features", "how", "contact"];
-      const allNavLinks = document.querySelectorAll(".nav-link, .mob-link");
-
-      function setActive(id) {
-        allNavLinks.forEach((l) => {
-          l.classList.toggle("active", l.dataset.section === id);
-        });
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) setActive(e.target.id);
-          });
-        },
-        { rootMargin: "-40% 0px -50% 0px" },
-      );
-
-      sections.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
-
-      // ── Smooth scroll for all anchor links ──
-      document.querySelectorAll('a[href^="#"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
-          const target = document.querySelector(a.getAttribute("href"));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
-      });
-
-      // ── Contact form validation ──
-      const form = document.getElementById("contact-form");
-      const submitBtn = document.getElementById("submit-btn");
-      const successMsg = document.getElementById("form-success");
-
-      function validateField(inputId, errorId, customValidator) {
-        const input = document.getElementById(inputId);
-        const error = document.getElementById(errorId);
-        if (!input || !error) return true;
-        let msg = "";
-        if (!input.value.trim()) {
-          msg = "هذا الحقل مطلوب";
-        } else if (customValidator) {
-          msg = customValidator(input.value.trim());
+        function openMenu() {
+          mobileMenu.classList.add("open");
+          overlay.classList.add("show");
+          hamburger.classList.add("active");
+          hamburger.setAttribute("aria-expanded", "true");
+          mobileMenu.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
         }
-        error.textContent = msg;
-        input.closest(".frame-23") &&
-          input.closest(".frame-23").classList.toggle("has-error", !!msg);
-        return !msg;
-      }
 
-      function emailValidator(val) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
-          ? ""
-          : "البريد الإلكتروني غير صحيح";
-      }
+        function closeMenu() {
+          mobileMenu.classList.remove("open");
+          overlay.classList.remove("show");
+          hamburger.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+          mobileMenu.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
 
-      // Live validation
-      ["brand-name", "manager-name", "sector", "city"].forEach((id) => {
-        const el = document.getElementById(id);
-        if (el)
-          el.addEventListener("input", () =>
-            validateField(
-              id,
-              "err-" +
-                id
-                  .replace("brand-name", "brand")
-                  .replace("manager-name", "manager"),
-            ),
-          );
-      });
-      const emailEl = document.getElementById("email");
-      if (emailEl)
-        emailEl.addEventListener("input", () =>
-          validateField("email", "err-email", emailValidator),
-        );
+        hamburger.addEventListener("click", function () {
+          mobileMenu.classList.contains("open") ? closeMenu() : openMenu();
+        });
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const v1 = validateField("brand-name", "err-brand", null);
-        const v2 = validateField("manager-name", "err-manager", null);
-        const v3 = validateField("email", "err-email", emailValidator);
-        const v4 = validateField("sector", "err-sector", null);
-        const v5 = validateField("city", "err-city", null);
+        overlay.addEventListener("click", closeMenu);
 
-        if (!(v1 && v2 && v3 && v4 && v5)) return;
+        mobileLinks.forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
 
-        submitBtn.disabled = true;
-        submitBtn.querySelector(".text-wrapper-32").textContent =
-          "جاري الإرسال...";
+        // ── Active nav link on scroll ──────────────────────────────────────────
+        const sections = [
+          "hero",
+          "stats",
+          "problem",
+          "solution",
+          "result",
+          "contact",
+        ];
+        const allNavLinks = document.querySelectorAll(".nav-link");
 
-        setTimeout(() => {
-          form.reset();
-          submitBtn.disabled = false;
-          submitBtn.querySelector(".text-wrapper-32").textContent = "إرسال";
-          successMsg.classList.add("show");
-          setTimeout(() => successMsg.classList.remove("show"), 5000);
-        }, 1200);
-      });
+        function updateActiveLink() {
+          const scrollY = window.pageYOffset + 120;
+          let current = "hero";
 
-      // ── Navbar scroll shrink ──
-      const siteHeader = document.querySelector(".site-header");
-      const SCROLL_THRESHOLD = 60;
+          sections.forEach(function (id) {
+            const el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollY) current = id;
+          });
 
-      function updateNavbar() {
-        siteHeader.classList.toggle(
-          "scrolled",
-          window.scrollY > SCROLL_THRESHOLD,
-        );
-      }
-      window.addEventListener("scroll", updateNavbar, { passive: true });
-      updateNavbar();
-    </script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 750,
-        once: true,
-        easing: "ease-out-cubic",
-        offset: 80,
-        disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-      });
+          allNavLinks.forEach(function (a) {
+            const sec = a.getAttribute("data-section");
+            a.classList.toggle("active", sec === current);
+          });
+        }
+
+        window.addEventListener("scroll", updateActiveLink, { passive: true });
+        updateActiveLink();
+
+        // ── Smooth scroll for anchor links ────────────────────────────────────
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+
+        // ── Contact form validation & submission ──────────────────────────────
+        const form = document.getElementById("contact-form");
+        const submitBtn = document.getElementById("submit-btn");
+        const successEl = document.getElementById("form-success");
+
+        function showError(id, msg) {
+          const el = document.getElementById(id + "-error");
+          if (el) {
+            el.textContent = msg;
+            el.style.display = "block";
+          }
+          const input = document.getElementById(id);
+          if (input) input.classList.add("input-error");
+        }
+
+        function clearErrors() {
+          document.querySelectorAll(".field-error").forEach(function (e) {
+            e.textContent = "";
+            e.style.display = "none";
+          });
+          document
+            .querySelectorAll(".real-input, .real-textarea")
+            .forEach(function (i) {
+              i.classList.remove("input-error");
+            });
+        }
+
+        function validateEmail(val) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+        }
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            clearErrors();
+            successEl.style.display = "none";
+
+            const brand = document.getElementById("brand").value.trim();
+            const manager = document.getElementById("manager").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const sector = document.getElementById("sector").value.trim();
+            const city = document.getElementById("city").value.trim();
+
+            let valid = true;
+
+            if (!brand) {
+              showError("brand", "يرجى إدخال اسم العلامة التجارية");
+              valid = false;
+            }
+            if (!manager) {
+              showError("manager", "يرجى إدخال اسم المسؤول");
+              valid = false;
+            }
+            if (!email) {
+              showError("email", "يرجى إدخال البريد الإلكتروني");
+              valid = false;
+            } else if (!validateEmail(email)) {
+              showError("email", "البريد الإلكتروني غير صحيح");
+              valid = false;
+            }
+            if (!sector) {
+              showError("sector", "يرجى إدخال القطاع");
+              valid = false;
+            }
+            if (!city) {
+              showError("city", "يرجى إدخال المدينة");
+              valid = false;
+            }
+
+            if (!valid) return;
+
+            // Simulate async submission
+            submitBtn.disabled = true;
+            document.getElementById("submit-label").textContent =
+              "جارٍ الإرسال...";
+
+            setTimeout(function () {
+              form.reset();
+              submitBtn.disabled = false;
+              document.getElementById("submit-label").textContent = "إرسال";
+              successEl.style.display = "block";
+              successEl.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+              });
+            }, 1200);
+          });
+
+          // Live input error clearing
+          form
+            .querySelectorAll(".real-input, .real-textarea")
+            .forEach(function (inp) {
+              inp.addEventListener("input", function () {
+                this.classList.remove("input-error");
+                const errId = this.id + "-error";
+                const errEl = document.getElementById(errId);
+                if (errEl) {
+                  errEl.textContent = "";
+                  errEl.style.display = "none";
+                }
+              });
+            });
+          // Problem accordion
+          document.querySelectorAll('.problem-panel').forEach(function(panel) {
+            panel.addEventListener('click', function() {
+              document.querySelectorAll('.problem-panel').forEach(function(p) {
+                p.classList.remove('active');
+              });
+              panel.classList.add('active');
+            });
+          });
+        }
+      })();
     </script>
   </body>
 </html>
