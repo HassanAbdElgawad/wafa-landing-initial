@@ -3,6 +3,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
+  padding-top: 80px;
   background: linear-gradient(0deg, rgba(246,246,250,1) 0%, rgba(246,246,250,1) 100%);
   font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
   direction: rtl;
@@ -14,8 +15,10 @@ button { cursor: pointer; }
 
 /* ═══════════════════════ HEADER / NAV ═══════════════════════ */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background: rgba(246, 246, 250, 0.82);
   backdrop-filter: blur(14px);
@@ -185,14 +188,12 @@ button { cursor: pointer; }
 
 /* ═══════════════════════ HERO ═══════════════════════ */
 .hero-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 80px 32px 40px;
+  max-width: 100%;
+  margin: 0;
+  padding: 80px 32px 0;
   text-align: center;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
-  min-height: auto;
-  max-height: none;
 }
 .hero-text-content {
   max-width: 900px;
@@ -222,7 +223,7 @@ button { cursor: pointer; }
 .hero-cta-area {
   display: flex;
   justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 .hero-main-cta {
   display: inline-flex;
@@ -245,38 +246,51 @@ button { cursor: pointer; }
   white-space: nowrap;
   direction: rtl;
 }
+
+/* Mockup container */
 .hero-mockup {
-  max-width: 900px;
-  margin: 0 auto;
   position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
+  flex-direction: row;          /* LTR order: mobile RIGHT, tablet LEFT */
+  direction: ltr;
   align-items: flex-end;
   justify-content: center;
+  background: url('imgs/Hero/hero-mobile-tablet-bg.png') no-repeat center 30% / 110% auto;
 }
-.hero-mockup::before {
+
+/* Bottom fade out */
+.hero-mockup::after {
   content: "";
   position: absolute;
-  inset: -80px -120px -40px;
-  background: radial-gradient(ellipse 80% 60% at 50% 60%, rgba(70,124,233,0.18) 0%, rgba(70,124,233,0.07) 50%, transparent 100%);
-  border-radius: 50%;
-  z-index: 0;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(246,246,250,1) 100%);
+  z-index: 10;
   pointer-events: none;
 }
+
+/* Tablet: LEFT side, behind, slightly blurred */
 .hero-tablet-img {
-  width: 82%;
+  width: 76%;
   display: block;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 20px 60px rgba(0,0,0,0.15));
+  filter: blur(1.5px) drop-shadow(0 20px 60px rgba(0,0,0,0.12));
+  flex-shrink: 0;
 }
+
+/* Mobile: RIGHT side, in front */
 .hero-mobile-img {
-  width: 22%;
+  width: 24%;
   display: block;
   position: relative;
   z-index: 2;
-  margin-inline-start: -6%;
-  margin-bottom: 2%;
-  filter: drop-shadow(0 12px 32px rgba(0,0,0,0.18));
+  margin-left: -7%;
+  margin-bottom: 3%;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.22));
+  flex-shrink: 0;
 }
 
 /* ═══════════════════════ STATS ═══════════════════════ */
@@ -1172,7 +1186,7 @@ button { cursor: pointer; }
 .text-wrapper-23 { font-family: "IBM Plex Sans Arabic", Helvetica; font-weight: 400; color: #000000bf; font-size: 10px; line-height: 28px; direction: rtl; }
 
 /* ═══════════════════════ MOBILE MENU DISPLAY ═══════════════════════ */
-.mobile-menu { display: flex; }
+.mobile-menu { display: none !important; }
 
 /* ═══════════════════════ RESPONSIVE ═══════════════════════ */
 @media (max-width: 900px) {
@@ -1210,8 +1224,9 @@ button { cursor: pointer; }
   .stat-card { flex-direction: column; }
   .stat-card-image { flex: none; width: 100%; min-height: 200px; max-height: 250px; }
 
-  .hero-section { padding: 60px 24px 32px; }
+  .hero-section { padding: 60px 24px 0; }
   .hero-title { font-size: clamp(24px, 5vw, 40px); }
+  .hero-mobile-img { width: 28%; margin-left: -5%; }
 }
 
 @media (max-width: 600px) {
@@ -1220,9 +1235,9 @@ button { cursor: pointer; }
 
   .section { padding: 48px 20px; }
 
-  .hero-section { padding: 48px 20px 24px; }
+  .hero-section { padding: 48px 20px 0; }
   .hero-title { font-size: clamp(22px, 5vw, 36px); }
-  .hero-main-cta .close-button-text { font-size: 16px; }
+  .hero-mobile-img { width: 30%; margin-left: -4%; }
 
   .stats-cards-row { gap: 20px; }
   .stat-card-inner { padding: 36px 28px; }
