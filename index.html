@@ -250,94 +250,84 @@
           data-panel="1"
           data-shrinked="imgs/Problem/image-1-shrinked.png"
           data-expanded="imgs/Problem/image-1-expanded.png"
-          style="background-image: url('imgs/Problem/image-1-shrinked.png')"
+          style="
+            background-image: url(&quot;imgs/Problem/image-1-shrinked.png&quot;);
+          "
         ></div>
         <div
           class="problem-panel"
           data-panel="2"
           data-shrinked="imgs/Problem/image-2-shrinked.png"
           data-expanded="imgs/Problem/image-2-expanded.png"
-          style="background-image: url('imgs/Problem/image-2-shrinked.png')"
+          style="
+            background-image: url(&quot;imgs/Problem/image-2-shrinked.png&quot;);
+          "
         ></div>
         <div
           class="problem-panel active"
           data-panel="3"
           data-shrinked="imgs/Problem/image-3-shrinked.png"
           data-expanded="imgs/Problem/image-3-expanded.png"
-          style="background-image: url('imgs/Problem/image-3-expanded.png')"
+          style="
+            background-image: url(&quot;imgs/Problem/image-3-expanded.png&quot;);
+          "
         ></div>
       </div>
     </section>
     <!-- ═══════════════════════════════ SOLUTION ═══════════════════════════════ -->
-    <section class="section solution-section" id="solution">
-      <!-- Visual: phone mockup + floating cards -->
-      <div class="solution-visual">
-        <div class="solution-phone-wrap">
-          <img
-            class="solution-phone-img"
-            src="imgs/Solution/solution-mobile.png"
-            alt="تطبيق وفاء"
-          />
-          <img
-            class="sol-card sol-card-upper"
-            src="imgs/Solution/solution-upper-card.png"
-            alt=""
-          />
-          <img
-            class="sol-card sol-card-middle"
-            src="imgs/Solution/solution-middle-card.png"
-            alt=""
-          />
-          <img
-            class="sol-card sol-card-lower"
-            src="imgs/Solution/solution-lower-card.png"
-            alt=""
-          />
+    <section class="solution-outer" id="solution">
+      <div class="solution-inner">
+        <!-- RIGHT in RTL: pill + title text (no card) -->
+        <div class="solution-text-col">
+          <div class="section-label-pill">
+            <span class="solution-label-text">الحل</span>
+          </div>
+          <p class="solution-title">
+            وفاء ليس مجرد برنامج ولاء تقليدي ! بل منصة تساعدك على:
+          </p>
         </div>
-      </div>
-      <!-- Dark info card -->
-      <div class="solution-card frame-4-new">
-        <div class="solution-bg-rect"></div>
-        <img
-          alt=""
-          class="solution-logo-piece"
-          src="https://c.animaapp.com/mnw7ax8lttcgkf/img/wafaa-logo-piece-7.svg"
-        />
-        <div class="solution-label div-wrapper">
-          <div class="text-wrapper-3">الحل</div>
+        <!-- CENTER: phone + floating cards -->
+        <div class="solution-visual">
+          <div class="solution-phone-wrap">
+            <img
+              class="solution-phone-img"
+              src="imgs/Solution/solution-mobile.png"
+              alt="تطبيق وفاء"
+            />
+            <img
+              class="sol-card sol-card-upper"
+              src="imgs/Solution/solution-upper-card.png"
+              alt=""
+            />
+            <img
+              class="sol-card sol-card-middle"
+              src="imgs/Solution/solution-middle-card.png"
+              alt=""
+            />
+            <img
+              class="sol-card sol-card-lower"
+              src="imgs/Solution/solution-lower-card.png"
+              alt=""
+            />
+          </div>
         </div>
-        <p class="solution-title text-wrapper-4">
-          وفاء ليس مجرد برنامج ولاء تقليدي ! بل منصة تساعدك على:
-        </p>
-      </div>
-      <!-- Bullets card -->
-      <div class="solution-bullets-card">
-        <ul class="solution-bullets">
-          <li class="solution-bullet">
-            <img
-              alt=""
-              class="solution-bullet-icon"
-              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group.png"
-            />
-            <span>بناء برنامج ولاء بسهولة وفق احتياجك.</span>
-          </li>
-          <li class="solution-bullet">
-            <img
-              alt=""
-              class="solution-bullet-icon"
-              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group-1.png"
-            />
-            <span>زيادة معدل تكرار زيارة العملاء.</span>
-          </li>
-          <li class="solution-bullet">
-            <img
-              alt=""
-              class="solution-bullet-icon"
-              src="https://c.animaapp.com/mnw7ax8lttcgkf/img/group-2.png"
-            />
-            <span>تحليل سلوك العملاء بدقة فائقة.</span>
-          </li>
-        </ul>
+        <!-- LEFT in RTL: bullet points (no card) -->
+        <div class="solution-bullets-col">
+          <ul class="solution-bullets">
+            <li class="solution-bullet">
+              <span class="solution-check"></span>
+              <span>بناء برنامج ولاء بسهولة وفق احتياجك.</span>
+            </li>
+            <li class="solution-bullet">
+              <span class="solution-check"></span>
+              <span>زيادة معدل تكرار زيارة العملاء.</span>
+            </li>
+            <li class="solution-bullet">
+              <span class="solution-check"></span>
+              <span>تحليل سلوك العملاء بدقة فائقة.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- ═══════════════════════════════ RESULT ═══════════════════════════════ -->
@@ -860,7 +850,8 @@
                 p.style.backgroundImage = "url('" + p.dataset.shrinked + "')";
               });
               panel.classList.add("active");
-              panel.style.backgroundImage = "url('" + panel.dataset.expanded + "')";
+              panel.style.backgroundImage =
+                "url('" + panel.dataset.expanded + "')";
             });
           });
         }
