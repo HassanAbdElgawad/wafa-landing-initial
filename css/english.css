@@ -1,0 +1,280 @@
+/* ═══════════════════════════════════════════════════════════════════
+   English (LTR) overrides for the homepage (index-en.html)
+   Applied via body.english-home
+   ═══════════════════════════════════════════════════════════════════ */
+
+html,
+body {
+  direction: ltr;
+}
+
+.english-home {
+  direction: ltr;
+}
+
+/* ── Global direction/alignment flips ──────────────────────────────── */
+
+.nav-container,
+.nav-links,
+.nav-right,
+.hero-section,
+.stats-section,
+.problem-section,
+.solution-outer,
+.result-section,
+.contact-section,
+.site-footer-section {
+  direction: ltr;
+}
+
+.real-input,
+.real-textarea,
+.text-wrapper-23 {
+  text-align: left;
+}
+
+/* Direction: LTR for all text elements */
+.english-home .hero-title,
+.english-home .hero-subtitle,
+.english-home .hero-main-cta .close-button-text,
+.english-home .stats-title,
+.english-home .stats-subtitle,
+.english-home .text-wrapper-3,
+.english-home .text-wrapper-5,
+.english-home .text-wrapper-6,
+.english-home .text-wrapper-24,
+.english-home .text-wrapper-25,
+.english-home .analytics-reporting,
+.english-home .analytics-reporting-2,
+.english-home .analytics-reporting-3,
+.english-home .these-tools,
+.english-home .these-tools-2,
+.english-home .these-tools-3,
+.english-home .text-wrapper-7,
+.english-home .text-wrapper-9,
+.english-home .text-wrapper-11,
+.english-home .text-wrapper-12,
+.english-home .text-wrapper-13,
+.english-home .text-wrapper-14,
+.english-home .text-wrapper-15,
+.english-home .text-wrapper-16,
+.english-home .text-wrapper-17,
+.english-home .text-wrapper-18,
+.english-home .text-wrapper-19,
+.english-home .text-wrapper-20,
+.english-home .text-wrapper-21,
+.english-home .text-wrapper-22,
+.english-home .solution-label-text,
+.english-home .solution-title,
+.english-home .solution-bullet span:last-child,
+.english-home .stat-card-content,
+.english-home .stat-headline,
+.english-home .stat-desc,
+.english-home .stat-source {
+  direction: ltr;
+}
+
+/* Text align: left */
+.english-home .stats-header,
+.english-home .stats-title,
+.english-home .stats-subtitle,
+.english-home .these-tools,
+.english-home .these-tools-2,
+.english-home .these-tools-3,
+.english-home .text-wrapper-12,
+.english-home .text-wrapper-13,
+.english-home .text-wrapper-15,
+.english-home .text-wrapper-17,
+.english-home .text-wrapper-18,
+.english-home .text-wrapper-22,
+.english-home .solution-title,
+.english-home .solution-bullet span:last-child {
+  text-align: left;
+}
+
+/* ── Frame / layout alignment flips ───────────────────────────────── */
+
+.english-home .frame-9,
+.english-home .frame-24 {
+  direction: ltr;
+}
+
+.english-home .frame-10,
+.english-home .frame-22,
+.english-home .frame-23,
+.english-home .frame-30,
+.english-home .frame-31,
+.english-home .frame-33 {
+  align-items: flex-start;
+}
+
+.english-home .frame-13,
+.english-home .frame-20 {
+  justify-content: flex-start;
+}
+
+.english-home .field-error {
+  direction: ltr;
+  align-self: flex-start;
+}
+
+.english-home .number-title,
+.english-home .number-title-2 {
+  direction: ltr;
+}
+
+/* ── Solution section ─────────────────────────────────────────────── */
+
+.english-home .solution-inner {
+  direction: ltr;
+  grid-template-columns: 340px 1fr 280px;
+}
+
+.english-home .solution-inner::before {
+  right: auto;
+  left: 0;
+}
+
+.english-home .solution-text-col {
+  width: 700px;
+  height: 500px;
+  padding: 5rem;
+  border-radius: 52px;
+  align-items: flex-start;
+}
+
+.english-home .solution-title {
+  width: 400px;
+  text-align: left;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.english-home .solution-phone-wrap {
+  width: 650px;
+}
+
+.english-home .solution-phone-img {
+  left: 12.5%;
+  transform: scaleX(-1);
+}
+
+.english-home .sol-card-upper {
+  left: 15%;
+}
+
+.english-home .sol-card-middle {
+  left: 80%;
+  top: 12%;
+}
+
+.english-home .sol-card-lower {
+  left: 15%;
+  right: auto;
+  bottom: 10%;
+}
+
+.english-home .solution-bullets-col {
+  width: 600px;
+  height: 350px;
+  left: -110%;
+  right: auto;
+  top: 5%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.english-home .solution-bullets {
+  width: 80%;
+}
+
+.english-home .solution-bullet {
+  direction: ltr;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────── */
+
+.english-home .frame-28,
+.english-home .frame-29 {
+  direction: ltr;
+}
+
+.english-home .frame-22,
+.english-home .frame-24,
+.english-home .frame-25,
+.english-home .frame-26,
+.english-home .frame-30,
+.english-home .frame-31,
+.english-home .frame-33 {
+  align-items: flex-start;
+}
+
+/* ── Mobile (≤ 900px) ─────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .mobile-nav-links {
+    direction: ltr;
+  }
+
+  .english-home .solution-inner {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    direction: ltr;
+    min-height: unset;
+  }
+
+  .english-home .solution-text-col {
+    width: 100%;
+    height: auto;
+    padding: clamp(16px, 3vw, 30px);
+    border-radius: clamp(18px, 3vw, 32px);
+    box-sizing: border-box;
+  }
+
+  .english-home .solution-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(24px, 3.8vw, 34px);
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .english-home .solution-phone-wrap {
+    width: min(58%, 420px);
+    margin: 0 auto;
+    left: 0;
+    right: auto;
+  }
+
+  .english-home .solution-phone-img {
+    transform: scaleX(-1);
+  }
+
+  .english-home .sol-card-upper,
+  .english-home .sol-card-middle,
+  .english-home .sol-card-lower {
+    display: none;
+  }
+
+  .english-home .solution-bullets-col {
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: clamp(14px, 2.6vw, 24px);
+    border-radius: clamp(16px, 2.8vw, 24px);
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  .english-home .solution-bullets {
+    width: 100%;
+  }
+
+  .english-home .solution-bullet {
+    direction: ltr;
+  }
+}

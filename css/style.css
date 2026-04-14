@@ -584,7 +584,6 @@ button {
   padding: 8px 20px;
   border-radius: 54px;
   border: 1px solid #ebebed;
-  /* margin-bottom: 20px; */
 }
 .text-wrapper-3 {
   font-family: "IBM Plex Sans Arabic", Helvetica;
@@ -700,7 +699,6 @@ button {
   bottom: -20px;
   right: 0;
   width: 72%;
-  /* background: rgba(195, 190, 235, 0.18); */
   border-radius: 36px;
   z-index: 0;
   pointer-events: none;
@@ -734,18 +732,12 @@ button {
 .solution-title {
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 700;
-  color: #1a1d2e;
-  font-size: clamp(26px, 3vw, 48px);
-  line-height: 1.55;
-  margin: 0;
-
   color: #000;
-  text-align: right;
-  font-family: "IBM Plex Sans Arabic";
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
+  text-align: right;
+  margin: 0;
   width: 400px;
 }
 
@@ -761,7 +753,6 @@ button {
 
 .solution-phone-wrap {
   position: relative;
-  /* width: 280px; */
   width: 650px;
   left: -10%;
 }
@@ -776,8 +767,6 @@ button {
 
 .sol-card {
   position: absolute;
-  /* border-radius: 14px; */
-  /* box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12); */
   display: block;
 }
 
@@ -808,21 +797,17 @@ button {
 /* ---- Col 3 (RTL left): bullet points ---- */
 .solution-bullets-col {
   display: flex;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   position: relative;
   z-index: 1;
-  padding: 40px 0;
+  padding: 2rem;
   background-color: white;
   border-radius: 29px;
   width: 600px;
   height: 350px;
   left: 75%;
   top: 5%;
-  padding: 2rem;
-
-  display: flex;
-  justify-content: end;
-  align-items: end;
 }
 
 .solution-bullets {
