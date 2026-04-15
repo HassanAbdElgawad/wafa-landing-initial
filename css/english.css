@@ -277,4 +277,8 @@ body {
   .english-home .solution-bullet {
     direction: ltr;
   }
+
+  .english-home .frame-28 {
+    align-items: flex-start;
+  }
 }

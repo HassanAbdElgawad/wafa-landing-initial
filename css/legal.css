@@ -607,8 +607,8 @@
 
   .privacy-page .privacy-toc-card .legal-links-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .privacy-page .privacy-toc-card .legal-links-list a {
@@ -688,11 +688,22 @@
 }
 
 @media (max-width: 900px) {
+  .english-legal.privacy-page .privacy-layout {
+    grid-template-columns: 1fr;
+  }
+
   .english-legal.privacy-page .privacy-sidebar {
     position: static;
     order: -1;
     width: 100%;
     max-width: 100%;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .english-legal.privacy-page .privacy-content {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
 
@@ -734,4 +745,10 @@
 
 .english-legal .frame-34 {
   align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .english-legal .frame-28 {
+    align-items: flex-start;
+  }
 }
