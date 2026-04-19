@@ -1,0 +1,754 @@
+.legal-body {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(70, 124, 233, 0.14),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(249, 115, 22, 0.1),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #f7f8fc 0%, #eef2f8 100%);
+}
+
+.legal-hero {
+  padding-top: 110px;
+  padding-bottom: 32px;
+}
+
+.legal-hero-card {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px;
+  border: 1px solid rgba(229, 232, 239, 0.9);
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(246, 248, 252, 0.98)
+  );
+  box-shadow: 0 24px 70px rgba(16, 24, 40, 0.08);
+}
+
+.legal-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(70, 124, 233, 0.1);
+  color: #2457bc;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legal-title {
+  margin: 24px 0 16px;
+  color: #101828;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+}
+
+.legal-intro {
+  max-width: 760px;
+  margin: 0 0 28px;
+  color: #475467;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.legal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.legal-meta-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid rgba(220, 227, 238, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #344054;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.legal-main {
+  padding-top: 16px;
+  padding-bottom: 96px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.legal-content,
+.legal-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legal-card,
+.legal-side-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 232, 239, 0.95);
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.06);
+}
+
+.legal-card {
+  padding: 28px 30px;
+}
+
+.legal-card-title,
+.legal-side-title {
+  margin: 0 0 16px;
+  color: #101828;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.legal-card p,
+.legal-card li,
+.legal-side-card p,
+.legal-side-card li {
+  margin: 0;
+  color: #475467;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.legal-list,
+.legal-numbered-list,
+.legal-links-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal-list li {
+  position: relative;
+  padding-right: 22px;
+}
+
+.legal-links-list li {
+  position: relative;
+}
+
+.legal-list li::before,
+.legal-links-list li::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #467ce9;
+}
+
+.legal-list,
+.legal-numbered-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legal-note {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(70, 124, 233, 0.1),
+    rgba(70, 124, 233, 0.04)
+  );
+  color: #264d9b;
+}
+
+.legal-numbered-list {
+  counter-reset: legal-counter;
+}
+
+.legal-numbered-list li {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.legal-numbered-list li::before {
+  counter-increment: legal-counter;
+  content: counter(legal-counter, decimal-leading-zero);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #101828;
+  color: #ffffff;
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.legal-numbered-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-numbered-content strong {
+  color: #101828;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.legal-side-card {
+  padding: 24px;
+  position: sticky;
+  top: 108px;
+}
+
+.legal-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.legal-links-list a {
+  color: #2457bc;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.legal-side-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.legal-side-cta:hover {
+  opacity: 0.88;
+}
+
+.legal-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legal-footer-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(229, 232, 239, 0.95);
+  color: #344054;
+  font-family: "IBM Plex Sans Arabic", Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 980px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-side-card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .legal-hero {
+    padding-top: 96px;
+  }
+
+  .legal-hero-card,
+  .legal-card,
+  .legal-side-card {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .legal-intro {
+    font-size: 16px;
+  }
+
+  .legal-numbered-list li {
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+  }
+
+  .legal-numbered-list li::before {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+  }
+}
+
+/* Privacy page custom layout (pixel-oriented to match supplied design) */
+.legal-body {
+  padding-top: 0;
+}
+
+.privacy-page {
+  background: #f6f6fa;
+}
+
+.english-legal {
+  direction: ltr;
+}
+
+.legal-body .site-header {
+  position: fixed;
+  top: 62px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: min(1720px, calc(100vw - 20px));
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+  z-index: 1200;
+  transition:
+    top 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.legal-body .site-header.scrolled {
+  top: 16px;
+  left: 50%;
+  right: auto;
+  width: min(1680px, calc(100vw - 34px));
+  transform: translateX(-50%);
+  padding: 0;
+}
+
+.privacy-page .privacy-hero {
+  max-width: 100%;
+  margin: 0;
+  padding-top: 28px;
+  padding-right: 36px;
+  padding-left: 36px;
+  padding-bottom: 30px;
+}
+
+.privacy-page .privacy-hero .legal-hero-card {
+  width: 100%;
+  max-width: 1476px;
+  min-height: 420px;
+  border-radius: 55.2px;
+  margin: 0 auto;
+  padding: 28px;
+  background: linear-gradient(100deg, #d7e8ff 1.68%, #f6f0ff 100%), #fff;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-page .privacy-hero .legal-title {
+  margin: 0;
+  text-align: center;
+  color: #101828;
+  font-size: clamp(28px, 2.7vw, 42px);
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+}
+
+.privacy-page .privacy-main {
+  padding-top: 8px;
+}
+
+.privacy-page .privacy-layout {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  direction: ltr;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 64px;
+  align-items: start;
+}
+
+.privacy-page .privacy-content,
+.privacy-page .privacy-sidebar {
+  direction: rtl;
+}
+
+.privacy-page .privacy-sidebar {
+  position: sticky;
+  top: 138px;
+  align-self: start;
+}
+
+.privacy-page .privacy-content {
+  max-width: 900px;
+  justify-self: start;
+  gap: 72px;
+}
+
+.privacy-page .privacy-section {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  scroll-margin-top: 190px;
+  border-radius: 0;
+}
+
+.privacy-page .privacy-section .legal-card-title {
+  margin-bottom: 12px;
+  font-size: clamp(24px, 1.8vw, 32px);
+  line-height: 1.35;
+}
+
+.privacy-page .privacy-section p,
+.privacy-page .privacy-section li {
+  color: #111827;
+  font-size: clamp(15px, 1vw, 18px);
+  line-height: 1.8;
+}
+
+.privacy-page .privacy-section .legal-list {
+  gap: 6px;
+}
+
+.privacy-page .privacy-section .legal-list li {
+  padding-right: 22px;
+}
+
+.privacy-page .privacy-section .legal-list li::before {
+  width: 7px;
+  height: 7px;
+  top: 16px;
+  background: #111827;
+}
+
+.privacy-page .privacy-toc-card {
+  position: static;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 8px 0;
+  border-radius: 0;
+}
+
+.privacy-page .privacy-toc-card .legal-side-title {
+  margin-bottom: 18px;
+  font-size: clamp(24px, 1.7vw, 30px);
+  line-height: 1.2;
+}
+
+.privacy-page .privacy-toc-card .legal-links-list {
+  gap: 6px;
+  padding-left: 0;
+  position: relative;
+}
+
+.privacy-page .privacy-toc-card .legal-links-list li::before {
+  display: none;
+}
+
+.privacy-page .privacy-toc-card .legal-links-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 180px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: #4b5563;
+  font-size: clamp(14px, 0.95vw, 16px);
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.privacy-page .privacy-toc-card .legal-links-list a.active {
+  background: #111111;
+  color: #ffffff;
+}
+
+.privacy-page .privacy-toc-bars {
+  position: absolute;
+  top: 100px;
+  right: -86px;
+  left: auto;
+  width: 42px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.privacy-page .privacy-toc-bars span {
+  height: 4px;
+  width: 42px;
+  border-radius: 4px;
+  background: #c5ccd8;
+  transition: background 0.2s;
+}
+
+.privacy-page .privacy-toc-bars span.is-near {
+  background: #8a95a8;
+}
+
+.privacy-page .privacy-toc-bars span.is-active {
+  background: #4b5563;
+}
+
+@media (max-width: 1200px) {
+  .privacy-page .privacy-layout {
+    grid-template-columns: 1fr 280px;
+    gap: 34px;
+  }
+
+  .privacy-page .privacy-toc-card .legal-side-title {
+    font-size: 30px;
+  }
+
+  .privacy-page .privacy-toc-card .legal-links-list a {
+    min-width: 170px;
+    font-size: 15px;
+  }
+
+  .privacy-page .privacy-section p,
+  .privacy-page .privacy-section li {
+    font-size: 16px;
+  }
+
+  .privacy-page .privacy-section .legal-card-title {
+    font-size: 28px;
+  }
+
+  .privacy-page .privacy-content {
+    gap: 58px;
+  }
+}
+
+@media (max-width: 900px) {
+  .legal-body .site-header {
+    top: 34px;
+    width: calc(100vw - 6px);
+  }
+
+  .legal-body .site-header.scrolled {
+    top: 14px;
+    left: 50%;
+    right: auto;
+    width: calc(100vw - 12px);
+    transform: translateX(-50%);
+    padding: 0;
+  }
+
+  .privacy-page .privacy-hero .legal-hero-card {
+    width: 100%;
+    min-height: 286px;
+    border-radius: 28px;
+  }
+
+  .privacy-page .privacy-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .privacy-page .privacy-content {
+    gap: 42px;
+  }
+
+  .privacy-page .privacy-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .privacy-page .privacy-toc-card {
+    position: static;
+    padding: 10px 0;
+  }
+
+  .privacy-page .privacy-toc-bars {
+    display: none;
+  }
+
+  .privacy-page .privacy-toc-card .legal-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .privacy-page .privacy-toc-card .legal-links-list a {
+    min-width: unset;
+    padding: 9px 14px;
+    font-size: 15px;
+  }
+
+  .privacy-page .privacy-section .legal-card-title {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+
+  .privacy-page .privacy-section p,
+  .privacy-page .privacy-section li {
+    font-size: clamp(16px, 4.2vw, 21px);
+  }
+}
+
+/* ── English legal overrides (must come AFTER .privacy-page rules) ── */
+
+.english-legal.privacy-page .privacy-content,
+.english-legal.privacy-page .privacy-sidebar {
+  direction: ltr;
+}
+
+.english-legal.privacy-page .privacy-layout {
+  grid-template-columns: 320px minmax(0, 1fr);
+}
+
+.english-legal.privacy-page .privacy-sidebar {
+  grid-column: 1;
+  grid-row: 1;
+  width: 320px;
+  max-width: 320px;
+}
+
+.english-legal.privacy-page .privacy-toc-card {
+  width: 100%;
+}
+
+.english-legal.privacy-page .privacy-content {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.english-legal.privacy-page .privacy-section .legal-card-title,
+.english-legal.privacy-page .privacy-section p,
+.english-legal.privacy-page .privacy-section li {
+  text-align: left;
+}
+
+.english-legal.privacy-page .privacy-section .legal-list li {
+  padding-left: 22px;
+  padding-right: 0;
+}
+
+.english-legal.privacy-page .privacy-section .legal-list li::before {
+  left: 0;
+  right: auto;
+}
+
+.english-legal.privacy-page .privacy-toc-bars {
+  left: -86px;
+  right: auto;
+}
+
+@media (max-width: 1200px) {
+  .english-legal.privacy-page .privacy-layout {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .english-legal.privacy-page .privacy-sidebar {
+    width: 280px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  .english-legal.privacy-page .privacy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .english-legal.privacy-page .privacy-sidebar {
+    position: static;
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .english-legal.privacy-page .privacy-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+/* ── English footer text-align overrides ── */
+
+.english-legal .frame-30 {
+  align-items: flex-start;
+}
+
+.english-legal .frame-31 {
+  align-items: flex-start;
+}
+
+.english-legal .text-wrapper-16 {
+  direction: ltr;
+  text-align: left;
+}
+
+.english-legal .text-wrapper-17,
+.english-legal .text-wrapper-18 {
+  text-align: left;
+}
+
+.english-legal .text-wrapper-19,
+.english-legal .text-wrapper-20,
+.english-legal .text-wrapper-21 {
+  direction: ltr;
+  text-align: left;
+}
+
+.english-legal .frame-33 {
+  align-items: flex-start;
+}
+
+.english-legal .text-wrapper-22 {
+  direction: ltr;
+  text-align: left;
+}
+
+.english-legal .frame-34 {
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .english-legal .frame-28 {
+    align-items: flex-start;
+  }
+}
