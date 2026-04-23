@@ -463,6 +463,8 @@
                   <input
                     class="real-input"
                     id="brand"
+                    maxlength="50"
+                    minlength="2"
                     name="brand"
                     placeholder="Enter your brand name"
                     required=""
@@ -479,7 +481,10 @@
                   <input
                     class="real-input"
                     id="manager"
+                    maxlength="50"
+                    minlength="2"
                     name="manager"
+                    pattern="[^0-9]*"
                     placeholder="Enter manager name"
                     required=""
                     type="text"
@@ -511,6 +516,7 @@
                   <input
                     class="real-input"
                     id="sector"
+                    maxlength="50"
                     name="sector"
                     placeholder="Enter your industry"
                     required=""
@@ -527,6 +533,7 @@
                   <input
                     class="real-input"
                     id="city"
+                    maxlength="50"
                     name="city"
                     placeholder="Enter your city"
                     required=""
@@ -542,11 +549,13 @@
                 <textarea
                   class="real-textarea"
                   id="message"
+                  maxlength="500"
                   name="message"
                   placeholder="Write your message"
                   rows="4"
                 ></textarea>
               </div>
+              <span class="field-error" id="message-error"></span>
             </div>
             <div class="form-success" id="form-success" style="display: none">
               Your request was sent successfully. Our team will contact you
