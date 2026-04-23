@@ -214,6 +214,8 @@
     return /\d/.test(val);
   }
 
+  var problemPanels = Array.from(document.querySelectorAll(".problem-panel"));
+
   // Cache problem-section images to avoid first-click white flash.
   var panelImageCache = {};
 
@@ -250,7 +252,7 @@
   function preloadProblemPanelImages() {
     var imageMap = {};
 
-    document.querySelectorAll(".problem-panel").forEach(function (panel) {
+    problemPanels.forEach(function (panel) {
       if (panel.dataset.shrinked) imageMap[panel.dataset.shrinked] = true;
       if (panel.dataset.expanded) imageMap[panel.dataset.expanded] = true;
     });
@@ -361,10 +363,10 @@
     // Problem accordion
     preloadProblemPanelImages();
 
-    document.querySelectorAll(".problem-panel").forEach(function (panel) {
+    problemPanels.forEach(function (panel) {
       panel.addEventListener("click", function () {
         preloadImage(panel.dataset.expanded).then(function () {
-          document.querySelectorAll(".problem-panel").forEach(function (p) {
+          problemPanels.forEach(function (p) {
             p.classList.remove("active");
             p.style.backgroundImage = "url('" + p.dataset.shrinked + "')";
           });
