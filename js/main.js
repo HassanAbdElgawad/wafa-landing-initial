@@ -129,6 +129,23 @@
 
   if (resultCards.length) setupRevealAnimation(Array.from(resultCards));
 
+  // Preload problem panel images so first click does not wait on network.
+  var problemPanels = Array.from(document.querySelectorAll(".problem-panel"));
+
+  if (problemPanels.length) {
+    var preloadCache = [];
+
+    problemPanels.forEach(function (panel) {
+      [panel.dataset.shrinked, panel.dataset.expanded].forEach(function (src) {
+        if (!src) return;
+        var img = new Image();
+        img.decoding = "async";
+        img.src = src;
+        preloadCache.push(img);
+      });
+    });
+  }
+
   // ── Smooth scroll for anchor links ───────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
@@ -262,9 +279,9 @@
       });
 
     // Problem accordion
-    document.querySelectorAll(".problem-panel").forEach(function (panel) {
+    problemPanels.forEach(function (panel) {
       panel.addEventListener("click", function () {
-        document.querySelectorAll(".problem-panel").forEach(function (p) {
+        problemPanels.forEach(function (p) {
           p.classList.remove("active");
           p.style.backgroundImage = "url('" + p.dataset.shrinked + "')";
         });
