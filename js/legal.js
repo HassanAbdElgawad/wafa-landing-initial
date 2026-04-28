@@ -10,9 +10,49 @@
     header.classList.toggle("scrolled", window.pageYOffset > 40);
   }
 
+  function setupRevealAnimation(elements) {
+    if (!elements.length) return;
+
+    var prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach(function (element) {
+        element.classList.add("is-visible");
+      });
+      return;
+    }
+
+    elements.forEach(function (element) {
+      element.classList.add("motion-reveal", "is-reveal-ready");
+    });
+
+    var observer = new IntersectionObserver(
+      function (entries, currentObserver) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.14,
+        rootMargin: "0px 0px -48px 0px",
+      }
+    );
+
+    elements.forEach(function (element, index) {
+      element.style.transitionDelay = index % 3 * 70 + "ms";
+      observer.observe(element);
+    });
+  }
+
   function openMenu() {
     mobileMenu.classList.add("open");
     overlay.classList.add("show");
+    if (header) header.classList.add("menu-open");
     hamburger.classList.add("active");
     hamburger.setAttribute("aria-expanded", "true");
     mobileMenu.setAttribute("aria-hidden", "false");
@@ -22,6 +62,7 @@
   function closeMenu() {
     mobileMenu.classList.remove("open");
     overlay.classList.remove("show");
+    if (header) header.classList.remove("menu-open");
     hamburger.classList.remove("active");
     hamburger.setAttribute("aria-expanded", "false");
     mobileMenu.setAttribute("aria-hidden", "true");
@@ -36,6 +77,14 @@
   mobileLinks.forEach(function (link) {
     link.addEventListener("click", closeMenu);
   });
+
+  setupRevealAnimation(
+    Array.from(
+      document.querySelectorAll(
+        ".legal-hero-card, .privacy-section, .privacy-toc-card, .legal-footer-chip"
+      )
+    )
+  );
 
   // ── Privacy/Terms TOC active state + bar intensity ───────────────
   var tocLinks = Array.from(

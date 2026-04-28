@@ -3,11 +3,13 @@
   var hamburger = document.getElementById("hamburger");
   var mobileMenu = document.getElementById("mobile-menu");
   var overlay = document.getElementById("mobile-overlay");
+  var header = document.querySelector(".site-header");
   var mobileLinks = document.querySelectorAll(".mobile-nav-link, .mobile-cta");
 
   function openMenu() {
     mobileMenu.classList.add("open");
     overlay.classList.add("show");
+    if (header) header.classList.add("menu-open");
     hamburger.classList.add("active");
     hamburger.setAttribute("aria-expanded", "true");
     mobileMenu.setAttribute("aria-hidden", "false");
@@ -17,6 +19,7 @@
   function closeMenu() {
     mobileMenu.classList.remove("open");
     overlay.classList.remove("show");
+    if (header) header.classList.remove("menu-open");
     hamburger.classList.remove("active");
     hamburger.setAttribute("aria-expanded", "false");
     mobileMenu.setAttribute("aria-hidden", "true");
@@ -54,6 +57,94 @@
 
   window.addEventListener("scroll", updateActiveLink, { passive: true });
   updateActiveLink();
+
+  function setupRevealAnimation(elements) {
+    if (!elements.length) return;
+
+    var prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach(function (element) {
+        element.classList.add("is-visible");
+      });
+      return;
+    }
+
+    elements.forEach(function (element) {
+      element.classList.add("motion-reveal", "is-reveal-ready");
+    });
+
+    var observer = new IntersectionObserver(
+      function (entries, currentObserver) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.14,
+        rootMargin: "0px 0px -48px 0px",
+      }
+    );
+
+    elements.forEach(function (element, index) {
+      element.style.transitionDelay = index % 3 * 70 + "ms";
+      observer.observe(element);
+    });
+  }
+
+  setupRevealAnimation(
+    Array.from(
+      document.querySelectorAll(
+        [
+          ".hero-text-content",
+          ".hero-mockup",
+          ".stats-header",
+          ".stat-card",
+          ".problem-header",
+          ".problem-accordion",
+          ".solution-text-col",
+          ".solution-visual",
+          ".solution-bullets-col",
+          ".result-section .section-label-pill",
+          ".result-section .text-wrapper-25",
+          ".result-section .nav-cta",
+          ".frame-22",
+          ".frame-10",
+          ".site-footer-section .frame-30",
+          ".site-footer-section .frame-33"
+        ].join(", ")
+      )
+    )
+  );
+
+  // ── Result cards reveal-on-scroll ───────────────────────────────
+  var resultCards = document.querySelectorAll(
+    ".features-card, .features-card-2, .features-card-3"
+  );
+
+  if (resultCards.length) setupRevealAnimation(Array.from(resultCards));
+
+  // Preload problem panel images so first click does not wait on network.
+  var problemPanels = Array.from(document.querySelectorAll(".problem-panel"));
+
+  if (problemPanels.length) {
+    var preloadCache = [];
+
+    problemPanels.forEach(function (panel) {
+      [panel.dataset.shrinked, panel.dataset.expanded].forEach(function (src) {
+        if (!src) return;
+        var img = new Image();
+        img.decoding = "async";
+        img.src = src;
+        preloadCache.push(img);
+      });
+    });
+  }
 
   // ── Smooth scroll for anchor links ───────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
