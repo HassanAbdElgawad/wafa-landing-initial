@@ -1340,7 +1340,8 @@ button {
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-size: 13px;
   direction: rtl;
-  align-self: flex-end;
+  align-self: flex-start;
+  text-align: right;
 }
 .text-wrapper-9 {
   font-family: "IBM Plex Sans Arabic", Helvetica;
